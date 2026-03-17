@@ -13,8 +13,8 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@revisão
 - ed@main-quest
+- ed@revisão
 tasks:
   ed@pintando: '{rate:100}'
 flags:

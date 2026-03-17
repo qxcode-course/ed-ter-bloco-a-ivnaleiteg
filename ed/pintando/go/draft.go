@@ -12,6 +12,7 @@ func main() {
 	fmt.Scan(&b)
 	fmt.Scan(&c)
 
+
 	if a <= 0 || b <= 0 || c <= 0 {
 		fmt.Println("Os lados devem ser números positivos")
 		return
