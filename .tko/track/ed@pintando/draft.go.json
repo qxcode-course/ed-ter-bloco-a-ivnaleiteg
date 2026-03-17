@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-16-32",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar a, b, c float64\n\n\tfmt.Scan(&a)\n\tfmt.Scan(&b)\n\tfmt.Scan(&c)\n\n\tif a <= 0 || b <= 0 || c <= 0 {\n\t\tfmt.Println(\"Os lados devem ser n\u00fameros positivos\")\n\t\treturn\n\t}\n\n\tif a+b <= c || a+c <= b || b+c <= a {\n\t\tfmt.Println(\"Os valores n\u00e3o formam um tri\u00e2ngulo v\u00e1lido\")\n\t\treturn\n\t}\n\n\ts := (a + b + c) / 2\n\tarea := math.Sqrt(s * (s - a) * (s - b) * (s - c))\n\n\tfmt.Printf(\"%.2f\\n\", area)\n}",
+            "lines": "29"
+        }
+    ]
+}
