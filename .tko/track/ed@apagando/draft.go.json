@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-29_15-12-45",
+            "content": "@@ -9,10 +9,8 @@\n main\n- %0A\n %0Aimp\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -34,113 +34,9 @@\n in()\n+ \n %7B\n-%0A%09var n int%0A%09fmt.Scan(&n)%0A%0A%09fila := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%0A%0A%09\n %0A%7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-03-29_15-35-46",
+            "content": "@@ -140,166 +140,10 @@\n %09%7D%0A%0A\n-%09var m int %0A%09fmt.Scan(&m)%0A%0A%09remover := make(map%5Bint%5Dbool)%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09var x int%0A%09%09fmt.Scan(&x)%0A%09%09remover%5Bx%5D = true %0A%09%7D%0A%0A%09resultado := %5B%5Dint%7B%7D\n %0A%0A%09\n+%0A%7D\n %0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-29_15-45-14",
+            "content": "@@ -301,192 +301,5 @@\n %7D%0A%0A%09\n-for i := 0; i %3C n; i++ %7B%0A%09%09if !remover%5Bfila%5Bi%5D%5D %7B%0A%09%09%09resultado = append(resultado, fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%09%0A%09for i := 0; i %3C len(resutado); i++ %7B%0A%09%09fmt.Print(resultado%5Bi%5D, %22 %22)%0A%09%7D%0A%0A%09fmt.Print()%0A%7D\n+%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-29_15-53-00",
+            "content": "@@ -419,25 +419,24 @@\n i %3C len(resu\n-l\n tado); i++ %7B\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-29_15-56-50",
+            "content": "package main \n\nimport \"fmt\"\n\nfunc main(){\n\tvar n int\n\tfmt.Scan(&n)\n\n\tfila := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tvar m int \n\tfmt.Scan(&m)\n\n\tremover := make(map[int]bool)\n\n\tfor i := 0; i < m; i++ {\n\t\tvar x int\n\t\tfmt.Scan(&x)\n\t\tremover[x] = true \n\t}\n\n\tresultado := []int{}\n\n\tfor i := 0; i < n; i++ {\n\t\tif !remover[fila[i]] {\n\t\t\tresultado = append(resultado, fila[i])\n\t\t}\n\t}\n\t\n\tfor i := 0; i < len(resultado); i++ {\n\t\tfmt.Print(resultado[i], \" \")\n\t}\n\n\tfmt.Print()\n}",
+            "lines": "38"
+        }
+    ]
+}

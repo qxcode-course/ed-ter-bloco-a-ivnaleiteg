@@ -1,4 +1,4 @@
-# Pintando a casa
+ # Pintando a casa
 
 ![_](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/pintando/cover.jpg)
 

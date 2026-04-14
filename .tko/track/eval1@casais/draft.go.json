@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-21-30",
+            "content": "@@ -1,9 +1,8 @@\n-%0A\n package \n@@ -5,17 +5,16 @@\n age main\n- \n %0Aimport \n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -36,429 +36,40 @@\n () %7B\n- %0A%0A    qtd := 0%0A    fmt.Scan (&qtd)%0A    animais := make (%5B%5Dint, qtd)%0A%0A    solteiros := make (map%5Bint%5D int)%0A    for i := range animais %7B%0A        fmt.Scan (&animais%5Bi%5D)%0A    %7D%0A%0A    n_pares := 0%0A    for _, animal := range animais %7B%0A        if solteiros %5B-animal%5D %3E 0 %7B%0A            solteiros %5B-animal%5D --%0A            n_pares ++ %0A        %7D else %7B%0A            solteiros %5Banimal%5D ++%0A        %7D%0A    %7D%0A%0A    fmt.Println(%22%25d%5Cn%22, pares\n+%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-14_13-33-43",
+            "content": "@@ -1,8 +1,9 @@\n+%0A\n package \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_13-38-11",
+            "content": "@@ -448,12 +448,19 @@\n n(%22%25d%5Cn%22\n+, pares\n )%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-38-28",
+            "content": "@@ -1,8 +1,28 @@\n+@@ -1,466 +1,52 @@%0A-\n package \n@@ -30,23 +30,33 @@\n ain \n-%0A\n+%250A\n import \n-%22fmt%22%0A%0A\n+%2522fmt%2522%250A%250A\n func\n@@ -67,12 +67,18 @@\n n() \n-%7B %0A%0A\n+%257B %250A%250A\n     \n@@ -81,25 +81,27 @@\n     qtd := 0\n-%0A\n+%250A\n     fmt.Scan\n@@ -107,17 +107,19 @@\n n (&qtd)\n-%0A\n+%250A\n     anim\n@@ -135,10 +135,14 @@\n ke (\n-%5B%5D\n+%255B%255D\n int,\n@@ -146,18 +146,22 @@\n nt, qtd)\n-%0A%0A\n+%250A%250A\n     solt\n@@ -182,19 +182,25 @@\n (map\n-%5Bint%5D\n+%255Bint%255D\n  int)\n-%0A\n+%250A\n     \n@@ -214,34 +214,38 @@\n = range animais \n-%7B%0A\n+%257B%250A\n         fmt.Scan\n@@ -258,24 +258,38 @@\n mais\n-%5Bi%5D)%0A    %7D%0A%0A\n+%255Bi%255D)%250A    %257D%250A%250A\n     \n+n_\n pare\n@@ -294,17 +294,19 @@\n res := 0\n-%0A\n+%250A\n     for \n@@ -332,18 +332,22 @@\n animais \n-%7B%0A\n+%257B%250A\n         \n@@ -363,24 +363,34 @@\n ros \n-%5B\n+%255B\n -animal\n-%5D %3E 0 %7B%0A\n+%255D %253E 0 %257B%250A\n     \n@@ -411,21 +411,27 @@\n ros \n-%5B\n+%255B\n -animal\n-%5D --%0A\n+%255D --%250A\n     \n@@ -438,16 +438,18 @@\n         \n+n_\n pares ++\n@@ -449,25 +449,27 @@\n ares ++ \n-%0A\n+%250A\n         \n %7D else %7B\n@@ -464,17 +464,23 @@\n     \n-%7D\n+%257D\n  else \n-%7B%0A\n+%257B%250A\n     \n@@ -501,70 +501,168 @@\n ros \n-%5B\n+%255B\n animal\n-%5D ++%0A     \n+%255D ++%250A\n    \n-%7D%0A\n     \n-%7D %0A    %0A    fmt.Printf(%22%25d%5Cn%22, pares)%0A%7D\n+ %257D%250A    %257D%250A%250A    fmt.Println(%2522%2525d%255Cn%2522, pares)%250A%257D%0A+@@ -452,15 +452,8 @@%250A d%25255Cn%252522%250A-, pares%250A )%25250A%25257D%25250A%0A %250A\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-14_13-51-13",
+            "content": "@@ -102,17 +102,16 @@\n nt, qtd)\n- \n %0A%0A    so\n@@ -444,15 +444,15 @@\n rint\n-ln \n+f\n (%22%25d\n+%5Cn\n %22, p\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-58-48",
+            "content": "@@ -445,16 +445,22 @@\n rintln (\n+%22%25d%22, \n pares)%0A%7D\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-59-23",
+            "content": "package main \nimport \"fmt\"\n\nfunc main() { \n\n    qtd := 0\n    fmt.Scan (&qtd)\n    animais := make ([]int, qtd) \n\n    solteiros := make (map[int] int)\n    for i := range animais {\n        fmt.Scan (&animais[i])\n    }\n\n    pares := 0\n    for _, animal := range animais {\n        if solteiros [-animal] > 0 {\n            solteiros [-animal] --\n            pares ++ \n        } else {\n            solteiros [animal] ++\n        }\n    } \n    \n    fmt.Println (pares)\n}\n",
+            "lines": "26"
+        }
+    ]
+}

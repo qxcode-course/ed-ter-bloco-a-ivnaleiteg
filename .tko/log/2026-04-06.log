@@ -1,0 +1,30 @@
+2026-04-06 17:24:13, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-06 17:24:15, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0
+2026-04-06 17:24:15, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0
+2026-04-06 17:39:50, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:128, fail:COMP
+2026-04-06 17:39:50, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:128, fail:COMP
+2026-04-06 17:39:55, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-06 17:40:04, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-06 17:40:05, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:128, fail:COMP
+2026-04-06 17:57:42, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:171, fail:COMP
+2026-04-06 17:57:42, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:171, fail:COMP
+2026-04-06 17:57:44, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:171, fail:COMP
+2026-04-06 17:57:44, EXEC, v:1, k:ed@manipulacao, mode:FULL, fail:COMP
+2026-04-06 17:57:46, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-06 17:58:09, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-06 17:58:10, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:172, fail:COMP
+2026-04-06 18:13:25, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:178, fail:COMP
+2026-04-06 18:13:26, EXEC, v:1, k:ed@manipulacao, mode:FULL, fail:COMP
+2026-04-06 18:13:26, EXEC, v:1, k:ed@manipulacao, mode:FULL, fail:COMP
+2026-04-06 18:13:27, EXEC, v:1, k:ed@manipulacao, mode:FULL, fail:COMP
+2026-04-06 18:13:27, EXEC, v:1, k:ed@manipulacao, mode:FULL, fail:COMP
+2026-04-06 18:14:11, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:178
+2026-04-06 18:14:11, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:178
+2026-04-06 18:14:15, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-06 18:17:37, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-06 18:17:37, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:178
+2026-04-06 18:17:46, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-06 18:18:56, SELF, v:1, k:ed@manipulacao, self:1, rate:85, study:90, problem:1, debug:1
+2026-04-06 18:25:09, MOVE, v:1, k:ed@especiais, mode:DOWN
+2026-04-06 18:25:10, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-04-06 18:25:11, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:132

@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_15-07-50",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,18 +33,16 @@\n ain() %7B%0A\n-%0A%0A\n     fmt.\n@@ -54,8 +54,15 @@\n ln(%22\n- \n+qxcode\n %22)%0A\n+%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-20_15-35-34",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -39,346 +39,26 @@\n  %7B%0A%0A\n-%09var nome string%0A%09var idade int%0A%0A%09fmt.Scanln(&nome)%0A%09fmt.Scanln(&idade)%0A%0A%09if idade %3C 12 %7B%0A%09%09fmt.Println(nome, %22eh crianca%22)%0A%09%7D else if idade %3C 18 %7B%0A%09%09fmt.Println(nome, %22eh jovem%22)%0A%09%7D else if idade %3C 65 %7B%0A%09%09fmt.Println(nome, %22eh adulto%22)%0A%09%7D else if idade %3C 1000 %7B%0A%09%09fmt.Println(nome, %22eh idoso%22)%0A%09%7D else %7B%0A%09%09fmt.Println(nome, %22eh mumia%22)%0A%09%7D%0A%7D\n+%0A    fmt.Println(%22 %22)\n %0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-03-20_15-53-19",
+            "content": "@@ -78,16 +78,18 @@\n fmt.Scan\n+ln\n (&nome)%0A\n@@ -97,16 +97,18 @@\n fmt.Scan\n+ln\n (&idade)\n@@ -137,22 +137,26 @@\n mt.Print\n-f(%22%25s \n+ln(nome, %22\n eh crian\n@@ -157,25 +157,17 @@\n  crianca\n-%5Cn%22, nome\n+%22\n )%0A%09%7D els\n@@ -199,31 +199,27 @@\n rint\n-f(%22%25s eh jovem%5Cn%22, nome\n+ln(nome, %22eh jovem%22\n )%0A%09%7D\n@@ -255,32 +255,28 @@\n rint\n-f(%22%25s eh adulto%5Cn%22, nome\n+ln(nome, %22eh adulto%22\n )%0A%09%7D\n@@ -314,77 +314,69 @@\n rint\n-f(%22%25s eh idoso%5Cn%22, nome)%0A%09%7D else %7B%0A%09%09fmt.Printf(%22%25s eh mumia%5Cn%22, nome\n+ln(nome, %22eh idoso%22)%0A%09%7D else %7B%0A%09%09fmt.Println(nome, %22eh mumia%22\n )%0A%09%7D\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-20_16-16-11",
+            "content": "@@ -1,401 +1,54 @@\n-package main%0A%0Aimport %22fmt%22 %0Afunc main() %7B%0A%0A%09var nome string%0A%09var idade int%0A%0A%09fmt.Scan(&nome)%0A%09fmt.Scan(&idade)%0A%0A%09if idade %3C 12 %7B%0A%09%09fmt.Printf(%22%25s eh crianca%5Cn%22, nome)%0A%09%7D else if idade %3C 18 %7B%0A%09%09fmt.Printf(%22%25s eh jovem%5Cn%22, nome)%0A%09%7D else if idade %3C 65 %7B%0A%09%09fmt.Printf(%22%25s eh adulto%5Cn%22, nome)%0A%09%7D else if idade %3C 1000 %7B%0A%09%09fmt.Printf(%22%25s eh idoso%5Cn%22, nome)%0A%09%7D else %7B%0A%09%09fmt.Printf(%22%25s eh mumia%5Cn%22, nome)%0A%09%7D%0A%7D\n+@@ -19,17 +19,17 @@%0A rt %2522fmt%2522%0A- %0A+%250A%0A %250Afunc ma\n %0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-20_16-17-12",
+            "content": "@@ -0,0 +1,401 @@\n+package main%0A%0Aimport %22fmt%22 %0Afunc main() %7B%0A%0A%09var nome string%0A%09var idade int%0A%0A%09fmt.Scan(&nome)%0A%09fmt.Scan(&idade)%0A%0A%09if idade %3C 12 %7B%0A%09%09fmt.Printf(%22%25s eh crianca%5Cn%22, nome)%0A%09%7D else if idade %3C 18 %7B%0A%09%09fmt.Printf(%22%25s eh jovem%5Cn%22, nome)%0A%09%7D else if idade %3C 65 %7B%0A%09%09fmt.Printf(%22%25s eh adulto%5Cn%22, nome)%0A%09%7D else if idade %3C 1000 %7B%0A%09%09fmt.Printf(%22%25s eh idoso%5Cn%22, nome)%0A%09%7D else %7B%0A%09%09fmt.Printf(%22%25s eh mumia%5Cn%22, nome)%0A%09%7D%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-21_20-09-42",
+            "content": "",
+            "lines": "0"
+        }
+    ]
+}

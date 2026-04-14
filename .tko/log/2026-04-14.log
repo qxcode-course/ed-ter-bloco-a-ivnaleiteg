@@ -1,0 +1,126 @@
+2026-04-14 02:21:36, MOVE, v:1, k:ed@casais, mode:PICK
+2026-04-14 02:21:39, EXEC, v:1, k:ed@casais, mode:FULL, rate:100
+2026-04-14 02:21:42, EXEC, v:1, k:ed@casais, mode:FULL, rate:100
+2026-04-14 02:21:44, EXEC, v:1, k:ed@casais, mode:FULL, rate:100
+2026-04-14 02:21:44, EXEC, v:1, k:ed@casais, mode:FULL, rate:100
+2026-04-14 02:21:44, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-04-14 02:30:43, MOVE, v:1, k:ed@casais, mode:BACK
+2026-04-14 02:30:47, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-04-14 02:30:50, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100, size:39
+2026-04-14 02:28:02, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-04-14 02:30:50, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-04-14 13:09:00, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-04-14 13:09:01, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100
+2026-04-14 13:10:26, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-04-14 13:13:40, MOVE, v:1, k:eval1@baruel, mode:DOWN
+2026-04-14 13:14:05, MOVE, v:1, k:eval1@baruel, mode:PICK
+2026-04-14 13:14:06, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:5
+2026-04-14 13:16:41, MOVE, v:1, k:eval1@baruel, mode:BACK
+2026-04-14 13:17:12, MOVE, v:1, k:eval1@baruel, mode:PICK
+2026-04-14 13:17:14, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:7
+2026-04-14 13:13:40, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 13:17:13, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 13:16:19, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 13:21:01, MOVE, v:1, k:ed@casais, mode:PICK
+2026-04-14 13:21:02, EXEC, v:1, k:ed@casais, mode:FULL, rate:100
+2026-04-14 13:21:05, EXEC, v:1, k:ed@casais, mode:FULL, rate:100
+2026-04-14 13:21:23, MOVE, v:1, k:eval1@baruel, mode:BACK
+2026-04-14 13:21:27, MOVE, v:1, k:eval1@casais, mode:DOWN
+2026-04-14 13:21:27, MOVE, v:1, k:eval1@casais, mode:PICK
+2026-04-14 13:21:30, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:5
+2026-04-14 13:21:33, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0
+2026-04-14 13:19:41, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 13:21:05, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-04-14 13:21:27, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:21:27, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:22:37, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:21:33, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:21:05, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-04-14 13:21:27, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:21:27, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:25:32, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:21:33, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:27:37, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:30:12, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:31:10, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:33:43, EXEC, v:1, k:eval1@casais, mode:FULL, size:27, fail:COMP
+2026-04-14 13:33:47, EXEC, v:1, k:eval1@casais, mode:FULL, fail:COMP
+2026-04-14 13:33:47, EXEC, v:1, k:eval1@casais, mode:FULL, fail:COMP
+2026-04-14 13:33:47, EXEC, v:1, k:eval1@casais, mode:FULL, fail:COMP
+2026-04-14 13:31:10, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:37:25, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:38:11, EXEC, v:1, k:eval1@casais, mode:FULL, size:26, fail:COMP
+2026-04-14 13:38:12, EXEC, v:1, k:eval1@casais, mode:FULL, fail:COMP
+2026-04-14 13:38:28, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:26
+2026-04-14 13:39:27, EXEC, v:1, k:eval1@casais, mode:FULL, size:26, fail:COMP
+2026-04-14 13:39:27, EXEC, v:1, k:eval1@casais, mode:FULL, size:26, fail:COMP
+2026-04-14 13:40:16, EXEC, v:1, k:eval1@casais, mode:FULL, size:26, fail:COMP
+2026-04-14 13:40:16, EXEC, v:1, k:eval1@casais, mode:FULL, size:26, fail:COMP
+2026-04-14 13:38:43, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:38:28, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:41:06, MOVE, v:1, k:eval1@casais, mode:BACK
+2026-04-14 13:41:54, SELF, v:1, k:eval1@casais, self:1, study:30
+2026-04-14 13:42:02, MOVE, v:1, k:eval1@baruel, mode:PICK
+2026-04-14 13:42:03, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:8
+2026-04-14 13:42:06, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0
+2026-04-14 13:38:43, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:38:28, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:42:05, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 13:42:05, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 13:45:26, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:47:34, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:48:27, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0
+2026-04-14 13:50:37, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:48:27, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 13:50:59, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0
+2026-04-14 13:51:09, MOVE, v:1, k:eval1@baruel, mode:BACK
+2026-04-14 13:51:12, MOVE, v:1, k:eval1@casais, mode:PICK
+2026-04-14 13:51:13, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100, size:26
+2026-04-14 13:51:15, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100
+2026-04-14 13:51:18, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100
+2026-04-14 13:51:51, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:50:59, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 13:51:18, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:53:47, MOVE, v:1, k:eval1@casais, mode:BACK
+2026-04-14 13:54:06, SELF, v:1, k:eval1@casais, self:1, rate:100, study:45
+2026-04-14 13:54:06, MOVE, v:1, k:eval1@casais, mode:PICK
+2026-04-14 13:54:10, MOVE, v:1, k:eval1@casais, mode:BACK
+2026-04-14 13:54:14, MOVE, v:1, k:eval1@apagando, mode:DOWN
+2026-04-14 13:54:14, MOVE, v:1, k:eval1@apagando, mode:PICK
+2026-04-14 13:54:17, EXEC, v:1, k:eval1@apagando, mode:FULL, size:4, fail:COMP
+2026-04-14 13:54:24, EXEC, v:1, k:eval1@apagando, mode:FULL, fail:COMP
+2026-04-14 13:51:51, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:50:59, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 13:51:18, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:55:14, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 13:54:14, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 13:55:35, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 13:55:14, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 13:54:14, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 13:56:25, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 13:57:44, EXEC, v:1, k:eval1@apagando, mode:FULL, size:10, fail:COMP
+2026-04-14 13:57:44, EXEC, v:1, k:eval1@apagando, mode:FULL, size:10, fail:COMP
+2026-04-14 13:58:03, EXEC, v:1, k:eval1@apagando, mode:FULL, size:10, fail:COMP
+2026-04-14 13:58:03, EXEC, v:1, k:eval1@apagando, mode:FULL, size:10, fail:COMP
+2026-04-14 13:58:19, EXEC, v:1, k:eval1@apagando, mode:FULL, size:10, fail:COMP
+2026-04-14 13:58:20, EXEC, v:1, k:eval1@apagando, mode:FULL, fail:COMP
+2026-04-14 13:58:20, EXEC, v:1, k:eval1@apagando, mode:FULL, fail:COMP
+2026-04-14 13:58:21, EXEC, v:1, k:eval1@apagando, mode:FULL, fail:COMP
+2026-04-14 13:58:21, EXEC, v:1, k:eval1@apagando, mode:FULL, fail:COMP
+2026-04-14 13:58:44, MOVE, v:1, k:eval1@apagando, mode:BACK
+2026-04-14 13:58:48, MOVE, v:1, k:eval1@casais, mode:PICK
+2026-04-14 13:58:49, EXEC, v:1, k:eval1@casais, mode:FULL, rate:0, size:26
+2026-04-14 13:59:23, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100, size:26
+2026-04-14 13:59:24, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100
+2026-04-14 13:56:25, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 13:59:21, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:59:24, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:58:52, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 14:01:53, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:59:24, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:58:52, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 14:01:53, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 14:12:30, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 14:15:09, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 14:15:09, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 14:19:55, MOVE, v:1, k:eval1@casais, mode:BACK

@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-21_17-50-54",
+            "content": "@@ -499,32 +499,37 @@\n r_, fig := range\n+%0A    \n  figuras %7B%0A     \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-21_17-52-51",
+            "content": "@@ -492,17 +492,16 @@\n %0A    for\n- \n _, fig :\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-21_17-53-29",
+            "content": "@@ -409,39 +409,8 @@\n   %7D%0A\n-    faltando := make(%5B%5Dint, 0)%0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-21_17-56-27",
+            "content": "@@ -860,9 +860,8 @@\n tando)%0A%7D\n-%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-14_02-30-50",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc imprimir (lista []int) {\n    saida := fmt.Sprintf (\"%v\", lista)\n    if saida == \"[]\" {\n        fmt.Println (\"N\")\n    } else {\n        fmt.Println (saida [1 : len(saida) - 1])\n    } \n}\n\nfunc main () {\n    var qtd_album, qtd_possui int\n    fmt.Scan (&qtd_album, &qtd_possui)\n    figuras := make ([]int, qtd_possui)\n    for i := range figuras {\n        fmt.Scan (&figuras[i])\n    }\n    faltando := make([]int, 0)\n    unicos := make (map[int]bool)\n    repetidos := make ([]int, 0, qtd_possui)\n\n    for _, fig := range figuras {\n        if unicos[fig] {\n            repetidos = append (repetidos, fig)\n        } else {\n            unicos[fig] = true\n        } \n    }\n    for i := 1; i <= qtd_album; i++ {\n        if !unicos[i] {\n            faltando = append (faltando, i)\n        }\n    }\n    imprimir (repetidos)\n    imprimir (faltando)\n}\n",
+            "lines": "39"
+        }
+    ]
+}

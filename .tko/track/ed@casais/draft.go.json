@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-21_15-16-19",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -41,415 +41,35 @@\n     \n-qtd := 0%0A    fmt.Scan (&qtd)%0A    animais := make (%5B%5Dint, qtd)%0A%0A    solteiros := make (map%5Bint%5D int)%0A    for i := range animais %7B%0A        fmt.Scan (&animais%5Bi%5D)%0A    %7D%0A    n_pares := 0%0A    for_, animal := range animais %7B%0A        if solteiros %5B-animal%5D %3E 0 %7B%0A            solteiros %5B-animal%5D --%0A            n_pares ++ %0A        %7D else %7B%0A            solteiros %5Banimal%5D ++%0A        %7D%0A    %7D%0A    fmt.Println (n_pares)%0A\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-21_15-53-56",
+            "content": "@@ -229,17 +229,16 @@\n %0A    for\n- \n _, anima\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-21_16-06-21",
+            "content": "@@ -439,18 +439,12 @@\n rint\n-f(%22%25d%5Cn%22, \n+ln (\n n_pa\n@@ -448,10 +448,11 @@\n _pares)%0A\n+%0A\n %7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-21_16-11-14",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -35,17 +35,16 @@\n ain() %7B%0A\n-%0A\n     qtd \n@@ -201,25 +201,24 @@\n s%5Bi%5D)%0A    %7D%0A\n-%0A\n     n_pares \n@@ -422,17 +422,16 @@\n %7D%0A    %7D%0A\n-%0A\n     fmt.\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-21_16-24-49",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n\n    qtd := 0\n    fmt.Scan (&qtd)\n    animais := make ([]int, qtd)\n\n    solteiros := make (map[int] int)\n    for i := range animais {\n        fmt.Scan (&animais[i])\n    }\n\n    n_pares := 0\n    for _, animal := range animais {\n        if solteiros [-animal] > 0 {\n            solteiros [-animal] --\n            n_pares ++ \n        } else {\n            solteiros [animal] ++\n        }\n    }\n\n    fmt.Printf(\"%d\\n\", n_pares)\n}\n",
+            "lines": "26"
+        }
+    ]
+}

@@ -2,8 +2,23 @@
     "patches": [
         {
             "label": "2026-03-17_13-16-32",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar a, b, c float64\n\n\tfmt.Scan(&a)\n\tfmt.Scan(&b)\n\tfmt.Scan(&c)\n\n\tif a <= 0 || b <= 0 || c <= 0 {\n\t\tfmt.Println(\"Os lados devem ser n\u00fameros positivos\")\n\t\treturn\n\t}\n\n\tif a+b <= c || a+c <= b || b+c <= a {\n\t\tfmt.Println(\"Os valores n\u00e3o formam um tri\u00e2ngulo v\u00e1lido\")\n\t\treturn\n\t}\n\n\ts := (a + b + c) / 2\n\tarea := math.Sqrt(s * (s - a) * (s - b) * (s - c))\n\n\tfmt.Printf(\"%.2f\\n\", area)\n}",
+            "content": "@@ -113,17 +113,16 @@\n an(&c)%0A%0A\n-%0A\n %09if a %3C=\n",
             "lines": "29"
+        },
+        {
+            "label": "2026-03-19_18-21-45",
+            "content": "@@ -33,16 +33,17 @@\n math%22%0A)%0A\n+%0A\n func mai\n@@ -47,11 +47,11 @@\n main\n- \n ()\n+ \n %7B%0A%09v\n@@ -69,16 +69,17 @@\n float64%0A\n+%0A\n %09fmt.Sca\n@@ -160,17 +160,16 @@\n .Println\n- \n (%22Os lad\n@@ -175,15 +175,12 @@\n dos \n-precisa\n+deve\n m se\n@@ -216,19 +216,16 @@\n n%0A%09%7D\n-%09\n %0A%0A%09if a\n- + \n++\n b %3C=\n@@ -231,19 +231,17 @@\n = c %7C%7C a\n- + \n++\n c %3C= b %7C\n@@ -243,19 +243,17 @@\n = b %7C%7C b\n- + \n++\n c %3C= a %7B\n@@ -270,42 +270,39 @@\n ntln\n- \n (%22\n-N%C3%A3o foi possivel\n+Os valores n%C3%A3o\n  forma\n-r\n+m\n  um tri\n-a\n+%C3%A2\n ngul\n@@ -323,17 +323,16 @@\n eturn%0A%09%7D\n- \n %0A%0A%09s := \n@@ -342,16 +342,17 @@\n + b + c)\n+ \n / 2%0A%09are\n@@ -365,17 +365,16 @@\n ath.Sqrt\n- \n (s * (s \n@@ -414,11 +414,9 @@\n rint\n-lf \n+f\n (%22%25.\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-19_18-47-26",
+            "content": "@@ -423,16 +423,17 @@\n mt.Print\n+l\n f (%22%25.2f\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-21_19-53-10",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\nfunc main (){\n\tvar a, b, c float64\n\tfmt.Scan(&a)\n\tfmt.Scan(&b)\n\tfmt.Scan(&c)\n\n\n\tif a <= 0 || b <= 0 || c <= 0 {\n\t\tfmt.Println (\"Os lados precisam ser n\u00fameros positivos\")\n\t\treturn\n\t}\t\n\n\tif a + b <= c || a + c <= b || b + c <= a {\n\t\tfmt.Println (\"N\u00e3o foi possivel formar um triangulo v\u00e1lido\")\n\t\treturn\n\t} \n\n\ts := (a + b + c)/ 2\n\tarea := math.Sqrt (s * (s - a) * (s - b) * (s - c))\n\n\tfmt.Printf (\"%.2f\\n\", area)\n}",
+            "lines": "28"
         }
     ]
 }

@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_16-02-39",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,356 +37,39 @@\n ) %7B%0A\n-%09var nome string%0A%09var idade int%0A%0A%09fmt.Scanln(&nome)%0A%09fmt.Scanln(&idade)%0A%0A%09if idade %3C 12 %7B%0A%09%09fmt.Printf(%22%25s eh crianca%22, nome)%0A%09%7D else if idade %3C 18 %7B%0A%09%09fmt.Printf(%22%25s eh jovem%22, nome)%0A%09%7D else if idade %3C 65 %7B%0A%09%09fmt.Printf(%22%25s eh adulto%22, nome)%0A%09%7D else if idade %3C 1000 %7B%0A%09%09fmt.Printf(%22%25s eh idoso%22, nome)%0A%09%7D else %7B%0A%09%09fmt.Printf(%22%25s eh mumia%22, nome)%0A%09%7D\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-20_16-13-55",
+            "content": "@@ -382,14 +382,13 @@\n , nome)%0A\n-%0A\n %09%7D%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-20_16-15-38",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import %22\n@@ -34,153 +34,282 @@\n main\n- \n ()\n+ \n %7B%0A%09var \n-H, P, F, D int%0A%0A%09fmt.Scan(&H, &P, &F, &D)%0A%0A%09for %7B%0A%09%09F = F + D%0A%0A%09%09if F %3C 0\n+nome string%0A%09var idade int%0A%0A%09fmt.Scanln(&nome)%0A%09fmt.Scanln(&idade)%0A%0A%09if idade %3C 12 %7B%0A%09%09fmt.Printf(%22%25s eh crianca%22, nome)%0A%09%7D else if idade %3C 18\n  %7B%0A%09%09\n-%09F = 15%09%0A%09%09%7D%0A%0A%09%09if F %3E 15 %7B%0A%09%09%09F = 0%0A%09%09%7D%0A%0A%09%09if F == P\n+fmt.Printf(%22%25s eh jovem%22, nome)%0A%09%7D else if idade %3C 65 %7B%0A%09%09fmt.Printf(%22%25s eh adulto%22, nome)%0A%09%7D else if idade %3C 1000\n  %7B%0A\n-%09\n %09%09fm\n@@ -322,26 +322,74 @@\n tf(%22\n-N%22)%0A%09%09%09return%0A%09%09%7D\n+%25s eh idoso%22, nome)%0A%09%7D else %7B%0A%09%09fmt.Printf(%22%25s eh mumia%22, nome)%0A\n %0A%09%7D%0A%7D\n+%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-20_17-28-10",
+            "content": "@@ -126,24 +126,25 @@\n F = 15%09%0A%09%09%7D%0A\n+%0A\n %09%09if F %3E 15 \n@@ -158,16 +158,17 @@\n = 0%0A%09%09%7D%0A\n+%0A\n %09%09if F =\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-20_17-29-28",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -33,11 +33,11 @@\n main\n+ \n ()\n- \n %7B%0A%09v\n@@ -124,16 +124,17 @@\n %09%09F = 15\n+%09\n %0A%09%09%7D%0A%09%09i\n@@ -208,56 +208,8 @@\n %09%09%7D%0A\n-%09%09if F == H %7B%0A%09%09%09fmt.Printf(%22S%22)%0A%09%09%09return%0A%09%09%7D%0A\n %09%7D%0A\n+\n %7D\n-%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-20_17-32-30",
+            "content": "@@ -255,10 +255,9 @@\n %09%09%7D%0A%09%7D%0A%7D\n- \n %0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-20_17-36-57",
+            "content": "@@ -1,263 +1,49 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc main() %7B%0A%09var H, P, F, D int%0A%0A%09fmt.Scan(&H, &P, &F, &D)%0A%0A%09for %7B%0A%09%09F = F + D%0A%0A%09%09if F %3C 0 %7B%0A%09%09%09F = 15%0A%09%09%7D%0A%09%09if F %3E 15 %7B%0A%09%09%09F = 0%0A%09%09%7D%0A%09%09if F == P %7B%0A%09%09%09fmt.Printf(%22N%22)%0A%09%09%09return%0A%09%09%7D%0A%09%09if F == H %7B%0A%09%09%09fmt.Printf(%22S%22)%0A%09%09%09return%0A%09%09%7D%0A%09%7D%0A%7D \n+@@ -256,8 +256,9 @@%0A %2509%257D%250A%2509%257D%250A%257D %0A+%250A%0A\n",
+            "lines": "3"
+        },
+        {
+            "label": "2026-03-21_19-55-29",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar H, P, F, D int\n\n\tfmt.Scan(&H, &P, &F, &D)\n\n\tfor {\n\t\tF = F + D\n\n\t\tif F < 0 {\n\t\t\tF = 15\n\t\t}\n\t\tif F > 15 {\n\t\t\tF = 0\n\t\t}\n\t\tif F == P {\n\t\t\tfmt.Printf(\"N\")\n\t\t\treturn\n\t\t}\n\t\tif F == H {\n\t\t\tfmt.Printf(\"S\")\n\t\t\treturn\n\t\t}\n\t}\n} ",
+            "lines": "28"
+        }
+    ]
+}
