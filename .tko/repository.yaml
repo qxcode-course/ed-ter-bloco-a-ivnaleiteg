@@ -22,10 +22,9 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@rec
-- ed@map_set
-- eval1@teste-1
 - ed@basic
+- ed@map_set
+- ed@rec
 flags:
   inbox: all
   panel: help
@@ -33,4 +32,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: eval1@casais
+selected: ed@apagando
+selected_index: 11

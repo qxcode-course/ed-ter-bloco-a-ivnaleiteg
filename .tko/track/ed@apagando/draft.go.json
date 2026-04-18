@@ -22,7 +22,12 @@
         },
         {
             "label": "2026-03-29_15-56-50",
-            "content": "package main \n\nimport \"fmt\"\n\nfunc main(){\n\tvar n int\n\tfmt.Scan(&n)\n\n\tfila := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tvar m int \n\tfmt.Scan(&m)\n\n\tremover := make(map[int]bool)\n\n\tfor i := 0; i < m; i++ {\n\t\tvar x int\n\t\tfmt.Scan(&x)\n\t\tremover[x] = true \n\t}\n\n\tresultado := []int{}\n\n\tfor i := 0; i < n; i++ {\n\t\tif !remover[fila[i]] {\n\t\t\tresultado = append(resultado, fila[i])\n\t\t}\n\t}\n\t\n\tfor i := 0; i < len(resultado); i++ {\n\t\tfmt.Print(resultado[i], \" \")\n\t}\n\n\tfmt.Print()\n}",
+            "content": "@@ -486,9 +486,8 @@\n rint()%0A%7D\n-%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-18_12-34-41",
+            "content": "package main \n\nimport \"fmt\"\n\nfunc main(){\n\tvar n int\n\tfmt.Scan(&n)\n\n\tfila := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tvar m int \n\tfmt.Scan(&m)\n\n\tremover := make(map[int]bool)\n\n\tfor i := 0; i < m; i++ {\n\t\tvar x int\n\t\tfmt.Scan(&x)\n\t\tremover[x] = true \n\t}\n\n\tresultado := []int{}\n\n\tfor i := 0; i < n; i++ {\n\t\tif !remover[fila[i]] {\n\t\t\tresultado = append(resultado, fila[i])\n\t\t}\n\t}\n\t\n\tfor i := 0; i < len(resultado); i++ {\n\t\tfmt.Print(resultado[i], \" \")\n\t}\n\n\tfmt.Print()\n}\n",
             "lines": "38"
         }
     ]
