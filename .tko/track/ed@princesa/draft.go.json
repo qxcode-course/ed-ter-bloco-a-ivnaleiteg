@@ -37,8 +37,23 @@
         },
         {
             "label": "2026-03-28_17-40-37",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var n, e int\n    fmt.Scan(&n, &e)\n\n    vivos := make([]int, n)\n    for i := 0; i < n; i++ {\n        vivos[i] = i + 1\n    }\n\n    pos := e - 1\n\n        fmt.Print(\"[ \")\n        for i := 0; i < len(vivos); i++ {\n            if i == pos {\n                fmt.Print(vivos[i], \">\")\n            } else {\n                fmt.Print(vivos[i])\n            }\n        }\n        fmt.Println(\"] \")\n\n        eliminar := (pos + 1) % len(vivos)\n        vivos = append(vivos[:eliminar], vivos[eliminar+1: ]...)\n\n        if eliminar < pos {\n            pos --\n        }\n        pos = pos % len(vivos)\n    \n    for i := 0; i < len(vivos); i++ {\n        if i == pos {\n            fmt.Print(vivos[i], \">\")\n        } else {\n            fmt.Print(vivos[i])\n        }\n        if i < len(vivos)-1 {\n            fmt.Print(\" \")\n        }\n    }\n        fmt.Println()\n}\n\n",
+            "content": "@@ -627,22 +627,79 @@\n     \n+%0A\n     \n-%0A%0A\n+for i := 0; i %3C len(vivos); i++ %7B%0A        if i == pos %7B%0A  \n         \n fmt.\n@@ -686,32 +686,34 @@\n pos %7B%0A          \n+  \n fmt.Print(%22%5B %22)%0A\n@@ -710,47 +710,154 @@\n int(\n-%22%5B %22)%0A        fmt.Print(vivos%5B0%5D, %22%3E %22)\n+vivos%5Bi%5D, %22%3E%22)%0A        %7D else %7B%0A            fmt.Print(vivos%5Bi%5D)%0A        %7D%0A        if i %3C len(vivos)-1 %7B%0A            fmt.Print(%22 %22)%0A        %7D%0A    %7D\n %0A   \n@@ -873,18 +873,13 @@\n Println(\n-%22%5D %22)%0A\n+)\n %0A%7D%0A%0A\n",
             "lines": "46"
+        },
+        {
+            "label": "2026-04-18_13-27-09",
+            "content": "@@ -185,35 +185,8 @@\n  1%0A%0A\n-    for len(vivos) %3E 1 %7B%0A%0A%0A\n     \n@@ -389,87 +389,8 @@\n   %7D%0A\n-            if i %3C len(vivos)-1 %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A\n     \n@@ -416,18 +416,18 @@\n rintln(%22\n- \n %5D\n+ \n %22)%0A%0A    \n@@ -523,16 +523,17 @@\n minar+1:\n+ \n %5D...)%0A%0A \n@@ -574,16 +574,17 @@\n      pos\n+ \n --%0A     \n@@ -584,25 +584,24 @@\n -%0A        %7D%0A\n-%0A\n         pos \n@@ -619,27 +619,34 @@\n (vivos)%0A    \n+   \n-%7D\n+ \n %0A%0A\n+    \n     fmt.Prin\n@@ -649,24 +649,28 @@\n Print(%22%5B %22)%0A\n+    \n     fmt.Prin\n@@ -683,23 +683,28 @@\n s%5B0%5D, %22%3E\n+ \n %22)%0A    \n+  \n+  \n fmt.Prin\n@@ -712,11 +712,13 @@\n ln(%22\n- \n %5D\n+ \n %22)%0A\n+%0A\n %7D%0A\n+%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-18_13-28-18",
+            "content": "@@ -648,13 +648,10 @@\n     \n-pos =\n+if\n  eli\n@@ -656,16 +656,71 @@\n liminar \n+%3C pos %7B%0A            pos--%0A        %7D%0A%0A        pos = pos \n %25 len(vi\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-18_13-29-42",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var n, e int\n    fmt.Scan(&n, &e)\n\n    vivos := make([]int, n)\n    for i := 0; i < n; i++ {\n        vivos[i] = i + 1\n    }\n\n    pos := e - 1\n\n    for len(vivos) > 1 {\n\n\n        fmt.Print(\"[ \")\n        for i := 0; i < len(vivos); i++ {\n            if i == pos {\n                fmt.Print(vivos[i], \">\")\n            } else {\n                fmt.Print(vivos[i])\n            }\n            if i < len(vivos)-1 {\n                fmt.Print(\" \")\n            }\n        }\n        fmt.Println(\" ]\")\n\n        eliminar := (pos + 1) % len(vivos)\n        vivos = append(vivos[:eliminar], vivos[eliminar+1:]...)\n\n        pos = eliminar % len(vivos)\n    }\n\n    fmt.Print(\"[ \")\n    fmt.Print(vivos[0], \">\")\n    fmt.Println(\" ]\")\n}\n",
+            "lines": "41"
         }
     ]
 }

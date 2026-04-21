@@ -16,6 +16,7 @@ Leia o nome da pessoa e um inteiro que representa a idade de uma pessoa e escrev
 
 ### Entrada
 
+
 - Na primeira o nome da pessoa (uma string)
 - Na segunfa linha a idade (um inteiro)
 

@@ -17,11 +17,11 @@ func main() {
 			F = 0
 		}
 		if F == P {
-			fmt.Printf("N")
+			fmt.Println("N")
 			return
 		}
 		if F == H {
-			fmt.Printf("S")
+			fmt.Println("S")
 			return
 		}
 	}

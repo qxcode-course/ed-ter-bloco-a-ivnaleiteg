@@ -14,53 +14,159 @@ type Pair struct {
 }
 
 func occurr(vet []int) []Pair {
-	_ = vet
-	return nil
+	freq := make(map[int]int)
+	for _, v := range vet {
+		if v < 0 {
+			v = -v
+		}
+		freq[v]++
+	}
+
+	var res []Pair
+	for k, v := range freq {
+		res = append(res, Pair{k, v})
+	}
+
+	for i := 0; i < len(res); i++ {
+		for j := i + 1; j < len(res); j++ {
+			if res[i].One > res[j].One {
+				res[i], res[j] = res[j], res[i]
+			}
+		}
+	}
+
+	return res
 }
 
 func teams(vet []int) []Pair {
-	_ = vet
-	return nil
+	if len(vet) == 0 {
+		return nil
+	}
+
+	var res []Pair
+	atual := vet[0]
+	count := 1
+
+	for i := 1; i < len(vet); i++ {
+		if vet[i] == atual {
+			count++
+		} else {
+			res = append(res, Pair{atual, count})
+			atual = vet[i]
+			count = 1
+		}
+	}
+
+	res = append(res, Pair{atual, count})
+	return res
 }
 
 func mnext(vet []int) []int {
-	_ = vet
-	return nil
+	res := make([]int, len(vet))
+
+	for i := 0; i < len(vet); i++ {
+		if vet[i] > 0 {
+			if (i > 0 && vet[i-1] < 0) || (i < len(vet)-1 && vet[i+1] < 0) {
+				res[i] = 1
+			}
+		}
+	}
+
+	return res
 }
 
 func alone(vet []int) []int {
-	_ = vet
-	return nil
+	res := make([]int, len(vet))
+
+	for i := 0; i < len(vet); i++ {
+		if vet[i] > 0 {
+			left := i > 0 && vet[i-1] < 0 
+			right := i < len(vet)-1 && vet[i+1] < 0
+
+			if !left && !right {
+				res[i] = 1
+			}
+		}
+	}
+	return res
 }
 
 func couple(vet []int) int {
-	_ = vet
-	return 0
-}
+	homens := make(map[int]int)
+	mulheres := make(map[int]int)
 
+	for _, v := range vet {
+		if v > 0 {
+			homens[v]++
+		} else {
+			mulheres[-v]++
+		}
+	}
+
+	total := 0
+	for stress, h := range homens {
+		m := mulheres[stress]
+		if h < m {
+			total += h
+		} else {
+			total += m
+		}
+	}
+	return total
+}
 func hasSubseq(vet []int, seq []int, pos int) bool {
-	_ = vet
-	_ = seq
-	_ = pos
-	return false
+	if pos+len(seq) > len(vet) {
+		return false
+	}
+
+	for i := 0; i < len(seq); i++ {
+		if vet[pos+i] != seq[i] {
+			return false
+		}
+	}
+
+	return true
 }
 
 func subseq(vet []int, seq []int) int {
-	_ = vet
-	_ = seq
+	for i := 0; i < len(vet); i++ {
+		if hasSubseq(vet, seq, i) {
+			return i
+		}
+	}
 	return -1
 }
 
 func erase(vet []int, posList []int) []int {
-	_ = vet
-	_ = posList
-	return nil
+	remover := make(map[int]bool)
+	for _, p := range posList {
+		remover[p] = true
+	}
+
+	var res []int
+	for i := 0; i < len(vet); i++ {
+		if !remover[i] {
+			res = append(res, vet[i])
+		}
+	}
+
+	return res
 }
 
 func clear(vet []int, value int) []int {
-	_ = vet
-	_ = value
-	return nil
+	var res []int 
+	for _, v := range vet {
+		if v < 0 {
+			if -v != value {
+				res = append(res, v)
+			}
+		} else {
+			if v != value {
+				res = append(res, v)
+			}
+		}
+	}
+	return res
 }
 
 func main() {
@@ -76,18 +182,18 @@ func main() {
 
 		switch args[0] {
 		case "occurr":
-			printSlice(occurr(str2vet(args[1])))
+			printSlicePair(occurr(str2vet(args[1])))
 		case "teams":
-			printSlice(teams(str2vet(args[1])))
+			printSlicePair(teams(str2vet(args[1])))
 		case "mnext":
-			printSlice(mnext(str2vet(args[1])))
+			printSliceInt(mnext(str2vet(args[1])))
 		case "alone":
-			printSlice(alone(str2vet(args[1])))
+			printSliceInt(alone(str2vet(args[1])))
 		case "erase":
-			printSlice(erase(str2vet(args[1]), str2vet(args[2])))
+			printSliceInt(erase(str2vet(args[1]), str2vet(args[2])))
 		case "clear":
 			val, _ := strconv.Atoi(args[2])
-			printSlice(clear(str2vet(args[1]), val))
+			printSliceInt(clear(str2vet(args[1]), val))
 		case "subseq":
 			fmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))
 		case "couple":
@@ -99,9 +205,6 @@ func main() {
 		}
 	}
 }
-
-// Funções auxiliares
-
 func str2vet(str string) []int {
 	if str == "[]" {
 		return nil
@@ -116,7 +219,18 @@ func str2vet(str string) []int {
 	return vet
 }
 
-func printSlice[T any](vet []T) {
+func printSliceInt(vet []int) {
+	fmt.Print("[")
+	for i, x := range vet {
+		if i > 0 {
+			fmt.Print(", ")
+		}
+		fmt.Print(x)
+	}
+	fmt.Println("]")
+}
+
+func printSlicePair(vet []Pair) {
 	fmt.Print("[")
 	for i, x := range vet {
 		if i > 0 {

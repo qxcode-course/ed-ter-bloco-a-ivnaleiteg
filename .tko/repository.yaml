@@ -23,8 +23,8 @@ sources:
   tasks: null
 expanded:
 - ed@basic
-- ed@map_set
 - ed@rec
+- ed@map_set
 flags:
   inbox: all
   panel: help
@@ -32,5 +32,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@apagando
-selected_index: 11
+selected: ed@triangulo
+selected_index: 19
