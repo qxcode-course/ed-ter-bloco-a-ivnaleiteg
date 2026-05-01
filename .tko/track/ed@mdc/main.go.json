@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-01_19-34-07",
+            "content": "@@ -1,45 +1,33 @@\n-package main%0A%0Aimport (%0A%09%22fmt%22%0A)%0A%0A\n+@@ -34,17 +34,16 @@%0A \n func mdc\n  (a,\n@@ -22,16 +22,20 @@\n func mdc\n+%0A- %0A\n  (a, b i\n@@ -39,46 +39,90 @@\n b in\n-t) int %7B%0A%09if b == 0 %7B%0A%09%09return a%0A%09%7D%0A%0A%09\n+%0A@@ -56,54 +56,16 @@%0A  %257B%250A%2509%0A-if b == 0 %257B%250A%2509%2509return a%250A%2509%257D%250A%250A%2509\n retu\n@@ -137,82 +137,79 @@\n , a%25\n+25\n b)%0A\n-%7D%0A%0Afunc main() %7B%0A%09var a, b int%0A%09fmt.Scan(&a, &b)%0A%09fmt.Println(mdc(a, b))%0A%7D\n++return 0%0A %250A%257D%250A%250A%0A@@ -132,11 +132,12 @@%0A dc(a, b)%0A+)%0A %250A%257D%250A\n %0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-05-01_19-45-20",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc (a, b int) int {\n\tif b == 0 {\n\t\treturn a\n\t}\n\n\treturn mdc(b, a%b)\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n}\n",
+            "lines": "19"
+        }
+    ]
+}

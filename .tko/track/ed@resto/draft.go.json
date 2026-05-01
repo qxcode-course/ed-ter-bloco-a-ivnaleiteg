@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-26_14-18-50",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,227 +23,53 @@\n mt%22%0A\n-%0A\n func \n-divResto(n int) %7B%0A    if n == 0 %7B%0A        return%0A    %7D%0A%0A    quociente := n / 2%0A    resto := n %25 2%0A%0A    divResto(quociente)%0A%0A    fmt.Println(%22%25d %25d%5Cn%22, quociente, resto)%0A%7D%0A%0Afunc main() %7B%0A    n := 100%0A    divResto(n\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-01_14-37-38",
+            "content": "@@ -163,17 +163,18 @@\n mt.Print\n-f\n+ln\n (%22%25d %25d%5C\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-01_14-38-24",
+            "content": "@@ -87,16 +87,24 @@\n %7D%0A%0A    q\n+uociente\n  := n / \n@@ -110,16 +110,20 @@\n  2%0A    r\n+esto\n  := n %25 \n@@ -139,16 +139,24 @@\n vResto(q\n+uociente\n )%0A%0A    f\n@@ -181,15 +181,28 @@\n %22, q\n-, r\n+uociente, resto\n )%0A%7D%0A\n+%0A\n func\n@@ -219,36 +219,16 @@\n     \n-var n int %0A    fmt.Scan(&n)%0A\n+n := 100\n %0A   \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-01_14-42-30",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc divResto(n int) {\n    if n == 0 {\n        return\n    }\n\n    q := n / 2\n    r := n % 2\n\n    divResto(q)\n\n    fmt.Printf(\"%d %d\\n\", q, r)\n}\nfunc main() {\n    var n int \n    fmt.Scan(&n)\n\n    divResto(n)\n}\n",
+            "lines": "22"
+        }
+    ]
+}
