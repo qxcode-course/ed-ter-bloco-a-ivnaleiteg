@@ -7,6 +7,16 @@
         },
         {
             "label": "2026-05-01_19-45-20",
+            "content": "@@ -101,18 +101,16 @@\n , a%25b)%0A%7D\n-%0A%7D\n %0A%0Afunc m\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-05-01_19-59-31",
+            "content": "@@ -101,16 +101,18 @@\n , a%25b)%0A%7D\n+%0A%7D\n %0A%0Afunc m\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-05-01_20-00-37",
             "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc (a, b int) int {\n\tif b == 0 {\n\t\treturn a\n\t}\n\n\treturn mdc(b, a%b)\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n}\n",
             "lines": "19"
         }

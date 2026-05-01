@@ -32,5 +32,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@mdc
-selected_index: 22
+selected: ed@labirinto
+selected_index: 24
