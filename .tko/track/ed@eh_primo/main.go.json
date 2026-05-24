@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-02_14-43-05",
+            "content": "@@ -192,95 +192,4 @@\n )%0A%7D%0A\n-%0Afunc main() %7B%0A%09var x int %0A%09fmt.Scan(&x)%0A%09if eh_primo(x, 2) %7B%0A%09%09fmt.Println(%22true%22)%0A%09%7D %0A%09%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-02_14-59-01",
+            "content": "@@ -279,39 +279,8 @@\n %0A%09%7D \n-else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D\n %0A\n+%09\n %7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-02_15-19-00",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo (x int, div int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\tif div*div > x {\n\t\treturn true\n\t}\n\tif x%div == 0 {\n\t\treturn false\n\t}\n\treturn eh_primo(x, div+1)\n}\n\nfunc main() {\n\tvar x int \n\tfmt.Scan(&x)\n\tif eh_primo(x, 2) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "26"
+        }
+    ]
+}

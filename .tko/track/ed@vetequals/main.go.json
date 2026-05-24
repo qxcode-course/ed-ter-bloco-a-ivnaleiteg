@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-02_15-20-29",
+            "content": "@@ -197,112 +197,8 @@\n l %7B%0A\n-%09if EhVazio(a %5B%5Dint, b %5B%5Dint) bool %7B%0A%09%09return true%0A%09%7D%0A%0A%09if EhVazio(a) %7C%7C EhVazio(b) %7B%0A%09%09return false%0A%09%7D%0A\n %09// \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-02_15-43-15",
+            "content": "@@ -300,79 +300,384 @@\n e%0A%09%7D\n- %0A%0A%09if a%5B0%5D != b%5B0%5D %7B%0A%09%09return false%0A%09%7D%0A%0A%09return equals(a%5B1:%5D, b%5B1:%5D)%0A%09\n+%0A%09// n%C3%A3o use a fun%C3%A7%C3%A3o len para ver ou comparar os tamanhos%0A%09// utilize a fun%C3%A7%C3%A3o EhVazio para ver se o vetor %C3%A9 vazio%0A%09// voc%C3%AA s%C3%B3 pode consultar o primeiro elemento do vetor%0A%09// e n%C3%A3o pode usar nenhum tipo de la%C3%A7o%0A%09// Use recursao para consultar os outros elementos equals(a%5B1:%5D, b%5B1:%5D)%0A%09// n%C3%A3o altere o prot%C3%B3tipo da fun%C3%A7%C3%A3o nem crie fun%C3%A7%C3%B5es auxiliares%0A%09_, _ = a, b%0A%09return false\n %0A%7D%0A%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-02_17-27-14",
+            "content": "@@ -125,24 +125,51 @@\n  == %22%5B%5D%22%0A%7D%0A%0A\n+// n%C3%A3o altere a assinatura%0A\n func equals(\n@@ -210,23 +210,29 @@\n io(a\n-) && EhVazio(b)\n+ %5B%5Dint, b %5B%5Dint) bool\n  %7B%0A%09\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-02_17-54-16",
+            "content": "@@ -305,16 +305,43 @@\n se%0A%09%7D%0A%0A%09\n+return equals(a%5B1:%5D, b%5B1:%5D)\n %0A%09%0A%7D%0A%0Afu\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-02_17-54-57",
+            "content": "@@ -309,35 +309,8 @@\n %7D%0A%0A%09\n-return equals(a%5B1:%5D, b%5B1:%5D)\n %0A%09%0A%7D\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-02_18-15-27",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc EhVazio(vet []int) bool {\n\treturn fmt.Sprint(vet) == \"[]\"\n}\n\nfunc equals(a []int, b []int) bool {\n\tif EhVazio(a) && EhVazio(b) {\n\t\treturn true\n\t}\n\n\tif EhVazio(a) || EhVazio(b) {\n\t\treturn false\n\t} \n\n\tif a[0] != b[0] {\n\t\treturn false\n\t}\n\n\treturn equals(a[1:], b[1:])\n\t\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tscanner.Scan()\n\tvet1 := str2slice(scanner.Text())\n\tscanner.Scan()\n\tvet2 := str2slice(scanner.Text())\n\tif equals(vet1, vet2) {\n\t\tfmt.Println(\"iguais\")\n\t} else {\n\t\tfmt.Println(\"diferentes\")\n\t}\n}\n\nfunc str2slice(line string) []int {\n\tparts := strings.Fields(line)\n\tnums := make([]int, 0)\n\tfor i := 1; i < len(parts)-1; i++ {\n\t\tvalue, _ := strconv.Atoi(parts[i])\n\t\tnums = append(nums, value)\n\t}\n\treturn nums\n}\n",
+            "lines": "54"
+        }
+    ]
+}

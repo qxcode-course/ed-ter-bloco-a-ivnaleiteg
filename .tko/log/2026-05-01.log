@@ -120,3 +120,13 @@
 2026-05-01 23:14:26, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
 2026-05-01 23:14:27, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
 2026-05-01 23:14:29, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-05-01 23:15:23, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-05-01 23:15:23, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-05-01 23:15:25, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-05-01 23:15:25, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-01 23:15:30, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-01 23:35:35, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-05-01 23:35:36, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-05-01 23:35:37, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-05-01 23:35:33, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-01 23:35:35, MOVE, v:1, k:ed@labirinto, mode:EDIT

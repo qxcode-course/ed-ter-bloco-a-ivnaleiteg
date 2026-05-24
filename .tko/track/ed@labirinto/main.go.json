@@ -22,7 +22,7 @@
         },
         {
             "label": "2026-05-01_23-11-00",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc getNeig(p Pos) []Pos {\n\treturn []Pos{\n\t\t{p.l, p.c - 1},\n\t\t{p.l - 1, p.c},\n\t\t{p.l, p.c + 1},\n\t\t{p.l + 1, p.c},\n\t}\n}\n\nfunc inside(grid [][]rune, p Pos) bool {\n\treturn !(p.l < 0 || p.l >= len(grid) || p.c < 0 || p.c >= len(grid[0]))\n}\n\nfunc search(grid [][]rune, cur, end Pos) bool {\n\tif !inside(grid, cur) || grid[cur.l][cur.c] != ' ' {\n\t\treturn false\n\t}\n\n\tif cur == end {\n\t\tgrid[cur.l][cur.c] = '.'\n\t\treturn true\n\t}\n\n\tgrid[cur.l][cur.c] = '.'\n\n\tfor _, next := range getNeig(cur) {\n\t\tif search(grid, next, end) {\n\t\t\treturn true\n\t\t}\n\t}\n\n\tgrid[cur.l][cur.c] = ' ' // backtracking\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tnl_nc := scanner.Text()\n\n\tvar nl, nc int\n\tfmt.Sscanf(nl_nc, \"%d %d\", &nl, &nc)\n\n\tgrid := make([][]rune, nl)\n\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []rune(scanner.Text())\n\t}\n\n\tvar startPos, endPos Pos\n\n\tfor l := 0; l < nl; l++ {\n\t\tfor c := 0; c < nc; c++ {\n\t\t\tif grid[l][c] == 'I' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tstartPos = Pos{l, c}\n\t\t\t}\n\t\t\tif grid[l][c] == 'F' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tendPos = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(grid, startPos, endPos)\n\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "content": "@@ -100,17 +100,16 @@\n %5B%5DPos %7B%0A\n-%0A\n %09return \n",
             "lines": "83"
         }
     ]

@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-18_22-57-10",
+            "content": "@@ -4,17 +4,17 @@\n kage mai\n-%0A\n+n\n %0Aimport \n@@ -23,1297 +23,53 @@\n mt%22%0A\n-%0Afunc ehValido(sequencia %5B%5Drune, index int, digito rune, L int) bool %7B%0A    for i := 1; i %3C= L; i++ %7B%0A        if index-i %3E= 0 && sequencia%5Bindex-i%5D == digito %7B%0A            return false%0A        %7D%0A        if index+i %3C len(sequencia) && sequencia%5Bindex+i%5D == digito %7B%0A            return false %0A        %7D%0A    %7D%0A    return true%0A%7D %0A%0Afunc resolverBacktracking(sequencia %5B%5Drune, L int) (%5B%5Drune, bool) %7B%0A    index := -1 %0A    for i, r := range sequencia %7B%0A        if r == '.' %7B%0A            index = i%0A            break%0A        %7D%0A    %7D%0A    if index == -1 %7B%0A        return sequencia, true%0A    %7D%0A    for d := 0; d %3C= L; d++ %7B%0A        digitoRune := rune('0' + d)%0A%0A        if ehValido(sequencia, index, digitoRune, L) %7B%0A            sequencia%5Bindex%5D = digitoRune %0A%0A            if resultado, resolvido := resolverBacktracking(sequencia, L); resolvido %7B%0A                return resultado, true %0A            %7D%0A            sequencia%5Bindex%5D = '.'%0A        %7D%0A    %7D%0A    return nil, false%0A%7D%0A%0Afunc main() %7B%0A    var sequenciaStr string%0A    var L int%0A%0A    if _, err := fmt.Scanln(&sequenciaStr); err != nil %7B%0A        return%0A    %7D%0A    if _, err := fmt.Scanln(&L); err != nil %7B%0A        return%0A    %7D%0A%0A    sequencia := %5B%5Drune(sequenciaStr)%0A%0A    if solucao, resolvido := resolverBacktracking(sequencia, L); resolvido %7B%0A%0A    %7D%0A\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-19_00-07-52",
+            "content": "@@ -1306,53 +1306,14 @@\n o %7B%0A\n-            fmt.Println(string(solucao))\n %0A    %7D%0A\n+%0A\n %7D%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-19_00-08-32",
+            "content": "@@ -4,17 +4,16 @@\n kage mai\n-n\n %0A%0Aimport\n@@ -1065,16 +1065,18 @@\n fmt.Scan\n+ln\n (&sequen\n@@ -1143,16 +1143,18 @@\n fmt.Scan\n+ln\n (&L); er\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-05-19_00-10-02",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc ehValido(sequencia []rune, index int, digito rune, L int) bool {\n    for i := 1; i <= L; i++ {\n        if index-i >= 0 && sequencia[index-i] == digito {\n            return false\n        }\n        if index+i < len(sequencia) && sequencia[index+i] == digito {\n            return false \n        }\n    }\n    return true\n} \n\nfunc resolverBacktracking(sequencia []rune, L int) ([]rune, bool) {\n    index := -1 \n    for i, r := range sequencia {\n        if r == '.' {\n            index = i\n            break\n        }\n    }\n    if index == -1 {\n        return sequencia, true\n    }\n    for d := 0; d <= L; d++ {\n        digitoRune := rune('0' + d)\n\n        if ehValido(sequencia, index, digitoRune, L) {\n            sequencia[index] = digitoRune \n\n            if resultado, resolvido := resolverBacktracking(sequencia, L); resolvido {\n                return resultado, true \n            }\n            sequencia[index] = '.'\n        }\n    }\n    return nil, false\n}\n\nfunc main() {\n    var sequenciaStr string\n    var L int\n\n    if _, err := fmt.Scan(&sequenciaStr); err != nil {\n        return\n    }\n    if _, err := fmt.Scan(&L); err != nil {\n        return\n    }\n\n    sequencia := []rune(sequenciaStr)\n\n    if solucao, resolvido := resolverBacktracking(sequencia, L); resolvido {\n            fmt.Println(string(solucao))\n    }\n}\n",
+            "lines": "59"
+        }
+    ]
+}

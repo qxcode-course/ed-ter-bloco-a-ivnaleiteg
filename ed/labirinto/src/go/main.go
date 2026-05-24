@@ -11,6 +11,7 @@ type Pos struct {
 }
 
 func getNeig(p Pos) []Pos {
+
 	return []Pos{
 		{p.l, p.c - 1},
 		{p.l - 1, p.c},
