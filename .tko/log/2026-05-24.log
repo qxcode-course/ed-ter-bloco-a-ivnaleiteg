@@ -1,0 +1,10 @@
+2026-05-24 21:49:36, MOVE, v:1, k:ed@vetbuild, mode:DOWN
+2026-05-24 21:53:40, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-24 21:53:43, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25, size:62
+2026-05-24 21:53:43, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25, size:62
+2026-05-24 21:53:46, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25, size:62
+2026-05-24 21:54:09, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-24 21:54:38, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-24 21:54:39, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:25
+2026-05-24 21:54:39, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-24 21:54:42, MOVE, v:1, k:ed@wordsearch, mode:EDIT
