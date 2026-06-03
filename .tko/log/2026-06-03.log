@@ -1,0 +1,33 @@
+2026-06-03 23:03:37, MOVE, v:1, k:ed@magicsearch, mode:DOWN
+2026-06-03 23:03:38, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-06-03 23:03:47, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:30, size:30
+2026-06-03 23:03:48, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:30
+2026-06-03 23:03:49, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:30
+2026-06-03 23:03:49, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:30
+2026-06-03 23:03:50, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:30
+2026-06-03 23:03:37, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-03 23:03:37, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-03 23:04:06, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-03 23:03:50, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-03 23:13:04, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-03 23:13:35, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-06-03 23:13:38, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-06-03 23:13:39, EXEC, v:1, k:ed@magicsearch, mode:FULL, size:28, fail:COMP
+2026-06-03 23:13:40, EXEC, v:1, k:ed@magicsearch, mode:FULL, fail:COMP
+2026-06-03 23:14:38, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-03 23:32:21, EXEC, v:1, k:ed@magicsearch, mode:FULL, size:16, fail:COMP
+2026-06-03 23:33:03, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-03 23:37:07, EXEC, v:1, k:ed@magicsearch, mode:FULL, size:37, fail:COMP
+2026-06-03 23:38:06, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-03 23:39:39, EXEC, v:1, k:ed@magicsearch, mode:FULL, size:48, fail:COMP
+2026-06-03 23:39:39, EXEC, v:1, k:ed@magicsearch, mode:FULL, size:48, fail:COMP
+2026-06-03 23:39:40, EXEC, v:1, k:ed@magicsearch, mode:FULL, size:48, fail:COMP
+2026-06-03 23:39:40, EXEC, v:1, k:ed@magicsearch, mode:FULL, size:48, fail:COMP
+2026-06-03 23:39:40, EXEC, v:1, k:ed@magicsearch, mode:FULL, size:48, fail:COMP
+2026-06-03 23:39:47, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100, size:48
+2026-06-03 23:40:09, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100
+2026-06-03 23:40:09, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100
+2026-06-03 23:40:10, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-06-03 23:41:34, SELF, v:1, k:ed@magicsearch, self:1, rate:100, study:50, concept:1, problem:1, debug:1
+2026-06-03 23:41:34, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-06-03 23:41:36, MOVE, v:1, k:ed@magicsearch, mode:BACK
