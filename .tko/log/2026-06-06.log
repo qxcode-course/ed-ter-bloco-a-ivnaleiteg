@@ -1,0 +1,11 @@
+2026-06-06 15:28:48, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-06 15:28:50, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66
+2026-06-06 15:28:50, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-06 15:33:36, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-06 15:34:01, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-06 15:45:53, EXEC, v:1, k:ed@iterador, mode:FULL, rate:0, size:136
+2026-06-06 15:45:53, EXEC, v:1, k:ed@iterador, mode:FULL, rate:0, size:136
+2026-06-06 15:47:42, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100, size:135
+2026-06-06 15:47:44, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100
+2026-06-06 15:47:45, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-06-06 15:48:27, SELF, v:1, k:ed@iterador, self:1, rate:100, study:70, concept:1, debug:1

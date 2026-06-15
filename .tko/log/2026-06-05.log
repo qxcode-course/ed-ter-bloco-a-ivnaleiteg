@@ -1,0 +1,8 @@
+2026-06-05 16:17:04, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-05 16:17:11, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:135
+2026-06-05 16:17:12, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66
+2026-06-05 16:17:12, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-06-05 16:18:01, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-05 16:18:02, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66
+2026-06-05 16:18:02, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-05 16:17:17, MOVE, v:1, k:ed@iterador, mode:EDIT

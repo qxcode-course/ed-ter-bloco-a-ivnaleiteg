@@ -19,13 +19,14 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@list
 - ed@vector
 flags:
   inbox: all
-  panel: skills
-  show_panel: 'true'
+  panel: graph
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@magicsearch
-selected_index: 8
+selected: ed@lista_d2
+selected_index: 12

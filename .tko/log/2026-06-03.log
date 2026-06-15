@@ -31,3 +31,9 @@
 2026-06-03 23:41:34, SELF, v:1, k:ed@magicsearch, self:1, rate:100, study:50, concept:1, problem:1, debug:1
 2026-06-03 23:41:34, MOVE, v:1, k:ed@magicsearch, mode:PICK
 2026-06-03 23:41:36, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-06-03 23:42:50, MOVE, v:1, k:ed@iterador, mode:DOWN
+2026-06-03 23:42:52, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-03 23:42:50, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-03 23:42:50, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-03 23:42:50, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-03 23:42:50, MOVE, v:1, k:ed@iterador, mode:EDIT
