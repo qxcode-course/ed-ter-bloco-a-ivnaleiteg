@@ -19,14 +19,16 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
 - ed@vector
+- ed@list
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'false'
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
 lang: go
-selected: ed@lista_d2
-selected_index: 12
+selected: ed@lista_d4
+selected_index: 15

@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-15_21-06-39",
+            "content": "@@ -37,16 +37,65 @@\n ngs%22%0A)%0A%0A\n+// mostra a lista com o elemento sword destacado%0A\n func ToS\n@@ -145,445 +145,125 @@\n  %7B%0A%09\n-var sb strings.Builder%0A%09sb.WriteString(%22%5B %22)%0A%0A%09for n := l.Front(); n != l.End(); n = n.next %7B%0A%09%09sb.WriteString(fmt.Sprint(n.Value))%0A%0A%09%09if n == sword %7B%0A%09%09%09sb.WriteString(%22%3E%22)%0A%09%09%7D%0A%09%09sb.WriteString(%22 %22)%0A%09%7D%0A%0A%09sb.WriteString(%22%5D %22)%0A%09return sb.String()%0A%7D%0A%0Afunc Next(l *DList%5Bint%5D, it *DNode%5Bint%5D) *DNode%5Bint%5D %7B%0A%09if it == nil %7B%0A%09%09%09return nil%0A%09%7D%0A%09next_node := it.next%0A%09%0A%09if next_node == l.End() %7B%0A%09%09next_node = next_node.next%0A%09%7D%0A%09return next_node\n+return %22%22%0A%7D%0A%0A// move para frente na lista circular%0Afunc Next(l *DList%5Bint%5D, it *DNode%5Bint%5D) *DNode%5Bint%5D %7B%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-15_21-24-50",
+            "content": "@@ -568,17 +568,16 @@\n sen int%0A\n-%0A\n %09fmt.Sca\n@@ -593,17 +593,16 @@\n chosen)%0A\n-%0A\n %09fmt.Pri\n@@ -619,17 +619,16 @@\n chosen)%0A\n-%0A\n %09l := Ne\n@@ -689,17 +689,16 @@\n k(i)%0A%09%7D%0A\n-%0A\n %09sword :\n@@ -761,17 +761,16 @@\n ord)%0A%09%7D%0A\n-%0A\n %09for ran\n@@ -864,20 +864,19 @@\n  sword)%0A\n+\n %09%7D%0A\n-%0A\n %09fmt.Pri\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-06-15_21-35-06",
+            "content": "@@ -569,16 +569,42 @@\n en int%0A%0A\n+%09fmt.Scan(&qtd, &chosen)%0A%0A\n %09fmt.Pri\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-15_21-40-15",
+            "content": "@@ -429,17 +429,16 @@\n  nil%0A%09%7D%0A\n-%0A\n %09next_no\n@@ -451,16 +451,18 @@\n it.next%0A\n+%09%0A\n %09if next\n@@ -574,97 +574,32 @@\n t%0A%0A%09\n-_, err := fmt.Scanf(%22%25d %25d%22, &qtd, &chosen)%0A%09if err != nil %7B%0A%09%09fmt.Sca\n+fmt.Printl\n n(\n-&\n qtd, \n-&\n chosen)\n-%0A%09%7D\n %0A%0A%09l\n@@ -878,10 +878,9 @@\n word))%0A%7D\n- \n %0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-15_21-47-46",
+            "content": "@@ -301,48 +301,25 @@\n %7D%0A%0A%09\n-res := strings.TrimSuffix(sb.\n+sb.Write\n String(\n-), \n %22\n+%5D\n  %22)%0A\n@@ -330,18 +330,19 @@\n urn \n-res + %22 %5D%22\n+sb.String()\n %0A%7D%0A%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-15_21-49-39",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\tvar sb strings.Builder\n\tsb.WriteString(\"[ \")\n\n\tfor n := l.Front(); n != l.End(); n = n.next {\n\t\tsb.WriteString(fmt.Sprint(n.Value))\n\n\t\tif n == sword {\n\t\t\tsb.WriteString(\">\")\n\t\t}\n\t\tsb.WriteString(\" \")\n\t}\n\n\tres := strings.TrimSuffix(sb.String(), \" \")\n\treturn res + \" ]\"\n}\n\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tif it == nil {\n\t\t\treturn nil\n\t}\n\n\tnext_node := it.next\n\tif next_node == l.End() {\n\t\tnext_node = next_node.next\n\t}\n\treturn next_node\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\n\t_, err := fmt.Scanf(\"%d %d\", &qtd, &chosen)\n\tif err != nil {\n\t\tfmt.Scan(&qtd, &chosen)\n\t}\n\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\n\tfmt.Println(ToStr(l, sword))\n} \n",
+            "lines": "62"
+        }
+    ]
+}
