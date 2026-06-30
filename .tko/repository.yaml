@@ -19,6 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@linear
 - ed@vector
 - ed@list
 flags:
@@ -30,5 +31,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@lista_d4
-selected_index: 15
+selected: ed@fila_enc
+selected_index: 22
