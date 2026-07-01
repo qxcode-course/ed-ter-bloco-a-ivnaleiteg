@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-30_22-31-45",
+            "content": "@@ -20,455 +20,23 @@\n t (%0A\n-%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0Afunc main() %7B%0A%09queue := NewQueue%5Bstring%5D()%0A%09%0A%09for c := 'A'; c %3C= 'P'; c++ %7B%0A%09%09queue.Enqueue(string(c))%0A%09%7D%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%0A%09for queue.item.Len() %3E 1 %7B%0A%09%09if !scanner.Scan() %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09line := scanner.Text()%0A%09%09parts := strings.Fiels(line)%0A%09%09if len(parts) %3C 2 %7B%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09golsEsquerda, _ := strconv.Atoi(parts%5B0%5D)%0A%09%09golsDireita, _ := strconv.Atoi(parts%5B1%5D)%0A%0A%0A%09%09%0A%09%7D%0A\n+)%0A%0Afunc main() %7B\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-30_22-48-51",
+            "content": "@@ -322,17 +322,16 @@\n ngs.Fiel\n-d\n s(line)%0A\n@@ -461,238 +461,14 @@\n %5D)%0A%0A\n-%09%09timeEsquerda := queue.Dequeue()%0A%09%09timeDireita := queue.Dequeue()%0A%0A%09%09if golsEsquerda %3E golsDireita %7B%0A%09%09%09queue.Enqueue(timeEsquerda)%0A%09%09%7D else %7B%0A%09%09%09queue.Enqueue(timeDireita)%0A%09%09%7D%0A%09%7D%0A%0A%09campeao := queue.Dequeue()%0A%09fmt.Println(campeao)\n+%0A%09%09%0A%09%7D%0A\n %0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-30_22-51-44",
+            "content": "@@ -224,17 +224,16 @@\n eue.item\n-s\n .Len() %3E\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-30_22-54-17",
+            "content": "@@ -9,10 +9,9 @@\n main\n- \n %0A\n+\n %0Aimp\n@@ -72,17 +72,16 @@\n unc main\n- \n () %7B%0A%09qu\n@@ -106,17 +106,18 @@\n ring%5D()%0A\n+%09\n %0A\n-\n %09for c :\n@@ -166,20 +166,19 @@\n ing(c))%0A\n+\n %09%7D%0A\n-%0A\n %09scanner\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-30_23-07-35",
+            "content": "@@ -1,702 +1,54 @@\n-package main %0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0Afunc main () %7B%0A%09queue := NewQueue%5Bstring%5D()%0A%0A%09for c := 'A'; c %3C= 'P'; c++ %7B%0A%09%09queue.Enqueue(string(c))%0A%09%7D%0A%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%0A%09for queue.items.Len() %3E 1 %7B%0A%09%09if !scanner.Scan() %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09line := scanner.Text()%0A%09%09parts := strings.Fields(line)%0A%09%09if len(parts) %3C 2 %7B%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09golsEsquerda, _ := strconv.Atoi(parts%5B0%5D)%0A%09%09golsDireita, _ := strconv.Atoi(parts%5B1%5D)%0A%0A%09%09timeEsquerda := queue.Dequeue()%0A%09%09timeDireita := queue.Dequeue()%0A%0A%09%09if golsEsquerda %3E golsDireita %7B%0A%09%09%09queue.Enqueue(timeEsquerda)%0A%09%09%7D else %7B%0A%09%09%09queue.Enqueue(timeDireita)%0A%09%09%7D%0A%09%7D%0A%0A%09campeao := queue.Dequeue()%0A%09fmt.Println(campeao)%0A%7D\n+@@ -683,11 +683,20 @@%0A .Println%0A+(campeao)%0A %250A%257D%250A\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-07-01_01-18-02",
+            "content": "package main \n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc main () {\n\tqueue := NewQueue[string]()\n\n\tfor c := 'A'; c <= 'P'; c++ {\n\t\tqueue.Enqueue(string(c))\n\t}\n\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor queue.items.Len() > 1 {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\n\t\tline := scanner.Text()\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) < 2 {\n\t\t\tcontinue\n\t\t}\n\n\t\tgolsEsquerda, _ := strconv.Atoi(parts[0])\n\t\tgolsDireita, _ := strconv.Atoi(parts[1])\n\n\t\ttimeEsquerda := queue.Dequeue()\n\t\ttimeDireita := queue.Dequeue()\n\n\t\tif golsEsquerda > golsDireita {\n\t\t\tqueue.Enqueue(timeEsquerda)\n\t\t} else {\n\t\t\tqueue.Enqueue(timeDireita)\n\t\t}\n\t}\n\n\tcampeao := queue.Dequeue()\n\tfmt.Println(campeao)\n}\n",
+            "lines": "46"
+        }
+    ]
+}
