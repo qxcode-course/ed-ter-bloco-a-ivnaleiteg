@@ -20,11 +20,12 @@ sources:
   quests: null
 expanded:
 - ed@list
+- ed@tree
+- ed@vector
+- ed@bfs
 - ed@linear
 - ed@backtrack
-- ed@bfs
 - ed@dfs
-- ed@vector
 flags:
   inbox: all
   panel: skills
@@ -34,5 +35,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@wordsearch
-selected_index: 34
+selected: ed@cercado
+selected_index: 53

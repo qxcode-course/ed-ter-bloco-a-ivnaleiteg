@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-01_14-22-24",
+            "content": "@@ -1,62 +1,105 @@\n-package main%0A%0Aimport (%0A    %22fmt%22%0A\n+@@ -10,171 +10,39 @@%0A ain%250A%0A-%250A%0A import %0A-(%250A    %2522fmt%2522%250A\n     \n-%22\n+%2522\n sort\n-%22%0A\n+%2522%250A\n     \n-%22\n+%2522\n strings\n-%22%0A\n+%2522%250A\n )   \n@@ -103,18 +103,22 @@\n         \n-%0A%0A\n+%250A%250A\n func bac\n@@ -130,18 +130,22 @@\n k(chars \n-%5B%5D\n+%255B%255D\n string, \n@@ -152,18 +152,22 @@\n visited \n-%5B%5D\n+%255B%255D\n bool, cu\n@@ -176,18 +176,22 @@\n ent \n-%5B%5D\n+%255B%255D\n string) \n %7B%0A  \n@@ -186,18 +186,22 @@\n string) \n-%7B%0A\n+%257B%250A\n     if l\n@@ -228,32 +228,133 @@\n hars\n-) %7B%0A        fmt.Prin\n+%0A+%2522fmt%2522%250Afunc main(%0A ) %257B%250A    %0A     %0A@@ -37,20 +37,16 @@%0A ) %257B%250A    %0A-   %0A- %0A fmt.Prin%0A@@ -53,387 +53,22 @@%0A \n tln(\n+%0A-\n stri\n@@ -375,13 +375,19 @@\n nt, \n-%22%22))%0A\n+%2522%2522))%250A\n     \n@@ -396,24 +396,32 @@\n   return\n-%0A\n+%250A\n     \n-%7D%0A%0A\n+%257D%250A%250A\n     for \n@@ -434,9 +434,11 @@\n ; i \n-%3C\n+%253C\n  len\n@@ -450,18 +450,22 @@\n s); i++ \n-%7B%0A\n+%257B%250A\n         \n@@ -478,14 +478,22 @@\n ited\n-%5Bi%5D %7B%0A\n+%255Bi%255D %257B%250A\n     \n@@ -508,25 +508,27 @@\n continue\n-%0A\n+%250A\n         \n %7D%0A      \n@@ -523,18 +523,22 @@\n     \n-%7D%0A\n+%257D%250A\n         \n %0A   \n@@ -529,25 +529,27 @@\n D%250A        \n-%0A\n+%250A\n         visi\n@@ -555,19 +555,25 @@\n ited\n-%5Bi%5D\n+%255Bi%255D\n  = true\n-%0A\n+%250A\n     \n@@ -611,14 +611,22 @@\n hars\n-%5Bi%5D)%0A%0A\n+%255Bi%255D)%250A%250A\n     \n@@ -663,18 +663,22 @@\n current)\n-%0A%0A\n+%250A%250A\n         \n@@ -693,14 +693,16 @@\n = cu\n-r\n+u\n rent\n-%5B\n+%255B\n :len\n@@ -716,10 +716,14 @@\n t)-1\n-%5D%0A\n+%255D%250A\n     \n@@ -737,19 +737,23 @@\n ited\n-%5Bi%5D\n+%255Bi%255D\n  = false\n %0A   \n@@ -752,197 +752,101 @@\n alse\n-%0A\n+%250A\n     \n-%7D%0A%7D%0A%0Afunc main() %7B%0A    var s string%0A%0A    if _, err := fmt.Scan(&s); err != nil %7B%0A        return %0A    %7D%0A%0A    chars := strings.Split(s, %22%22)%0A    sort.Strings(chars)%0A    visited := make(%5B%5D)%0A%7D\n+%257D%250A%257D%250A%250A%250Afunc main() %257B%250A%250A    fmt.Println(%2522 %0A+%2522Hello, World!%0A %2522)%250A%257D\n %0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-07-01_14-45-51",
+            "content": "@@ -125,29 +125,24 @@\n %5B%5Dstring) %7B%0A\n-    %0A\n     if len(c\n@@ -161,24 +161,24 @@\n en(chars) %7B%0A\n+\n         fmt.\n@@ -272,21 +272,16 @@\n ; i++ %7B%0A\n-    %0A\n         \n@@ -544,21 +544,16 @@\n ain() %7B%0A\n-    %0A\n     var \n@@ -663,21 +663,16 @@\n (s, %22%22)%0A\n-    %0A\n     sort\n@@ -687,21 +687,16 @@\n (chars)%0A\n-    %0A\n     visi\n@@ -713,98 +713,8 @@\n e(%5B%5D\n-bool, len(chars))%0A    %0A    var current %5B%5Dstring%0A    %0A    backtrack(chars, visited, current\n )%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-01_14-51-41",
+            "content": "@@ -670,17 +670,16 @@\n gs.Split\n- \n (s, %22%22)%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-07-01_15-00-01",
+            "content": "package main\n\nimport (\n    \"fmt\"\n    \"sort\"\n    \"strings\"\n)        \n\nfunc backtrack(chars []string, visited []bool, current []string) {\n    \n    if len(current) == len(chars) {\n        fmt.Println(strings.Join(current, \"\"))\n        return\n    }\n\n    for i := 0; i < len(chars); i++ {\n    \n        if visited[i] {\n            continue\n        }\n        \n        visited[i] = true\n        current = append(current, chars[i])\n\n        backtrack(chars, visited, current)\n\n        current = current[:len(current)-1]\n        visited[i] = false\n    }\n}\n\nfunc main() {\n    \n    var s string\n\n    if _, err := fmt.Scan(&s); err != nil {\n        return \n    }\n\n    chars := strings.Split (s, \"\")\n    \n    sort.Strings(chars)\n    \n    visited := make([]bool, len(chars))\n    \n    var current []string\n    \n    backtrack(chars, visited, current)\n}\n",
+            "lines": "49"
+        }
+    ]
+}

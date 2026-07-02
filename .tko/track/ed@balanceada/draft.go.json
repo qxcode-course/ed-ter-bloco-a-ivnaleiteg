@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-01_22-13-35",
+            "content": "@@ -10,448 +10,20 @@\n ain%0A\n-%0A\n import \n-(%0A    %22bufio%22%0A    %22fmt%22%0A    %22os%22%0A    %22string%22%0A)%0A%0Afunc isBalanced(s string) bool %7B%0A    var stack %5B%5Drune%0A    %0A    for _, char := range s %7B%0A        if char == '(' %7C%7C char == '%5B' %7B%0A            stack = append(stack, char)%0A        %7D else if char == ')' %7C%7C char == '%5D' %7B%0A            if len(stack) == 0 %7B%0A                return false%0A            %7D%0A%0A            top := stack%5Blen(stack)-1%5D%0A%0A            if (char == ')' && )%0A        %7D%0A    %7D%0A%7D%0A\n+%22fmt%22\n %0Afun\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-01_23-44-38",
+            "content": "@@ -20,17 +20,20 @@\n t (%0A\n-%09\n+    \n %22bufio%22%0A\n %09%22fm\n@@ -32,22 +32,31 @@\n io%22%0A\n-%09\n+    \n %22fmt%22%0A\n-%09\n+    \n %22os%22%0A\n-%09\n+    \n %22str\n@@ -64,35 +64,8 @@\n ng%22%0A\n-%09%22strings%22%0A%09%22text/scanner%22%0A\n )%0A%0Af\n@@ -430,482 +430,74 @@\n  && \n-top == '(') %7C%7C (char == '%5D' && top == '%5B') %7B%0A                stack = stack%5B:len(stack)-1%5D%0A            %7D else %7B%0A                return false%0A            %7D%0A        %7D%0A    %7D%0A    return len(stack) == 0%0A%7D%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A%0A    if scanner.Scan()%7B%0A        input := strings.TrimSpace(scanner.Text())%0A%0A        if isBalanced(input) %7B%0A            fmt.Println(%22balanceado%22)%0A        %7D else %7B%0A            fmt.Println(%22nao balanceado%22)%0A        %7D%0A    %7D\n+)%0A        %7D%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-02_00-03-31",
+            "content": "@@ -46,17 +46,43 @@\n %09%22string\n-s\n+%22%0A%09%22strings%22%0A%09%22text/scanner\n %22%0A)%0A%0Afun\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-07-02_00-03-48",
+            "content": "@@ -85,24 +85,40 @@\n  bool %7B%0A    \n+var stack %5B%5Drune\n %0A    %0A    fo\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-07-02_00-05-02",
+            "content": "@@ -93,25 +93,13 @@\n     \n-var stack %5B%5Drune%0A\n+%0A    \n %0A   \n@@ -366,16 +366,508 @@\n tack)-1%5D\n+%0A%0A            if (char == ')' && top == '(') %7C%7C (char == '%5D' && top == '%5B') %7B%0A                stack = stack%5B:len(stack)-1%5D%0A            %7D else %7B%0A                return false%0A            %7D%0A        %7D%0A    %7D%0A    return len(stack) == 0%0A%7D%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A%0A    if scanner.Scan()%7B%0A        input := strings.TrimSpace(scanner.Text())%0A%0A        if isBalanced(input) %7B%0A            fmt.Println(%22balanceado%22)%0A        %7D else %7B%0A            fmt.Println(%22nao balanceado%22)\n %0A       \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-07-02_00-14-54",
+            "content": "@@ -382,501 +382,8 @@\n )-1%5D\n-%0A%0A            if (char == ')' && top == '(') %7C%7C (char == '%5D' && top == '%5B') %7B%0A                stack = stack%5B:len(stack)-1%5D%0A            %7D else %7B%0A                return false%0A            %7D%0A        %7D%0A    %7D%0A    return len(stack) == 0%0A%7D%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A%0A    if scanner.Scan() %7B%0A        input := strings.TrimSpace(scanner.Text())%0A%0A        if isBalanced(input) %7B%0A            fmt.Println(%22balanceado%22)%0A        %7D else %7B%0A            fmt.Println(%22nao balanceada%22)\n %0A   \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-07-02_00-24-34",
+            "content": "@@ -860,33 +860,33 @@\n n(%22nao balancead\n-o\n+a\n %22)%0A        %7D%0A   \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-07-02_00-24-46",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\nfunc isBalanced(s string) bool {\n    var stack []rune\n\n    for _, char := range s {\n        if char == '(' || char == '[' {\n            stack = append(stack, char)\n        } else if char == ')' || char == ']' {\n            if len(stack) == 0 {\n                return false\n            }\n\n            top := stack[len(stack)-1]\n\n            if (char == ')' && top == '(') || (char == ']' && top == '[') {\n                stack = stack[:len(stack)-1]\n            } else {\n                return false\n            }\n        }\n    }\n    return len(stack) == 0\n}\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n\n    if scanner.Scan() {\n        input := strings.TrimSpace(scanner.Text())\n\n        if isBalanced(input) {\n            fmt.Println(\"balanceado\")\n        } else {\n            fmt.Println(\"nao balanceado\")\n        }\n    }\n}\n",
+            "lines": "45"
+        }
+    ]
+}
