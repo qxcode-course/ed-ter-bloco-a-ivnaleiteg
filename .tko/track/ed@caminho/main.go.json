@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-03_15-16-47",
+            "content": "@@ -42,10 +42,8 @@\n os%22%0A\n-%09%0A\n )%0A%0At\n@@ -115,114 +115,11 @@\n urn \n-%5B%5DPos%7B%0A%09%09%7Bl: p.l - 1, c: p.c%7D,%0A%09%09%7Bl: p.l + 1, c: p.c%7D, %0A%09%09%7Bl: p.l, c: p.c - 1%7D,%0A%09%09%7Bl: p.l, c: p.c + 1%7D,%0A%09%7D\n+nil\n %0A%7D%0A%0A\n@@ -446,866 +446,57 @@\n  %7B%0A%09\n-queue := NewQueue%5BPos%5D()%0A%09queue.Enqueue(startPos)%0A%0A%09visitados := make(map%5BPos%5Dbool)%0A%09visitados%5BstartPos%5D = true%0A%0A%09caminho := make(map%5BPos%5DPos)%0A%0A%09destinoEncontrado := false%0A%0A%09for !queue.IsEmpty() %7B%0A%09%09atual, _ := queue.Dequeue()%0A%0A%09%09if atual == endPos %7B%0A%09%09%09destinoEncontrado = true%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09for _, vizinho := range atual.getNeig() %7B%0A%09%09%09if inside(grid, vizinho) && !visitados%5Bvizinho%5D && match(grid, vizinho, ' ') %7B%0A%09%09%09%09visitados%5Bvizinho%5D = true%0A%09%09%09%09queue.Enqueue(vizinho)%0A%09%09%09%09caminho%5Bvizinho%5D = atual%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09if destinoEncontrado %7B%0A%09%09voltar(caminho, endPos, startPos, grid)%0A%09%7D%0A%0A%09grid%5BstartPos.l%5D%5BstartPos.c%5D = 'I'%0A%09grid%5BendPos.l%5D%5BendPos.c%5D = 'F'%0A%7D%0A%0Afunc voltar(caminho map%5BPos%5DPos, atual Pos, startPos Pos, grid %5B%5D%5B%5Drune) %7B%0A%09pai, existe := caminho%5Batual%5D%0A%09for existe && pai != startPos %7B%0A%09%09grid%5Bpai.l%5D%5Bpai.c%5D = '.'%0A%09%09pai, existe = caminho%5Bpai%5D%0A%09%7D%0A%7D\n+_, _, _ = grid, startPos, endPos%0A%7D%0A%0Afunc voltar()\n %0A%0Afu\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-03_16-05-43",
+            "content": "@@ -1286,118 +1286,126 @@\n  %7B%0A%09\n-grid%5Batual.l%5D%5Batual.c%5D = '.'%0A%0A%09for atual != startPos %7B%0A%09%09atual = caminho%5Batual%5D%0A%09%09grid%5Batual.l%5D%5Batual.c%5D = '.'\n+pai, existe := caminho%5Batual%5D%0A%09for existe && pai != startPos %7B%0A%09%09grid%5Bpai.l%5D%5Bpai.c%5D = '.'%0A%09%09pai, existe = caminho%5Bpai%5D\n %0A%09%7D%0A\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-07-03_16-09-16",
+            "content": "@@ -1741,16 +1741,82 @@\n im Pos%0A%0A\n+%09// Procurando inicio e fim e colocando ' ' nas posi%C3%A7%C3%B5es iniciais%0A\n %09for l :\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-07-04_14-37-16",
+            "content": "@@ -1133,16 +1133,85 @@\n grid)%0A%09%7D\n+%0A%0A%09grid%5BstartPos.l%5D%5BstartPos.c%5D = 'I'%0A%09grid%5BendPos.l%5D%5BendPos.c%5D = 'F'\n %0A%7D%0A%0Afunc\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-07-04_14-40-32",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc (p Pos) getNeig() []Pos {\n\treturn []Pos{\n\t\t{l: p.l - 1, c: p.c},\n\t\t{l: p.l + 1, c: p.c}, \n\t\t{l: p.l, c: p.c - 1},\n\t\t{l: p.l, c: p.c + 1},\n\t}\n}\n\nfunc inside(grid [][]rune, pos Pos) bool {\n\tnrows := len(grid)\n\tncols := len(grid[0])\n\treturn pos.l >= 0 && pos.l < nrows && pos.c >= 0 && pos.c < ncols\n}\n\nfunc match(grid [][]rune, pos Pos, char rune) bool {\n\treturn inside(grid, pos) && grid[pos.l][pos.c] == char\n}\n\nfunc search(grid [][]rune, startPos Pos, endPos Pos) {\n\tqueue := NewQueue[Pos]()\n\tqueue.Enqueue(startPos)\n\n\tvisitados := make(map[Pos]bool)\n\tvisitados[startPos] = true\n\n\tcaminho := make(map[Pos]Pos)\n\n\tdestinoEncontrado := false\n\n\tfor !queue.IsEmpty() {\n\t\tatual, _ := queue.Dequeue()\n\n\t\tif atual == endPos {\n\t\t\tdestinoEncontrado = true\n\t\t\tbreak\n\t\t}\n\n\t\tfor _, vizinho := range atual.getNeig() {\n\t\t\tif inside(grid, vizinho) && !visitados[vizinho] && match(grid, vizinho, ' ') {\n\t\t\t\tvisitados[vizinho] = true\n\t\t\t\tqueue.Enqueue(vizinho)\n\t\t\t\tcaminho[vizinho] = atual\n\t\t\t}\n\t\t}\n\t}\n\n\tif destinoEncontrado {\n\t\tvoltar(caminho, endPos, startPos, grid)\n\t}\n}\n\nfunc voltar(caminho map[Pos]Pos, atual Pos, startPos Pos, grid [][]rune) {\n\tgrid[atual.l][atual.c] = '.'\n\n\tfor atual != startPos {\n\t\tatual = caminho[atual]\n\t\tgrid[atual.l][atual.c] = '.'\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tvar nl, nc int\n\tscanner.Scan()\n\tline := scanner.Text()\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tmat := make([][]rune, nl) // Inicializa a matriz de runes\n\n\t// Carregando matriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tline := scanner.Text()\n\t\tmat[i] = []rune(line)\n\t}\n\n\tvar inicio, fim Pos\n\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif mat[l][c] == 'I' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tinicio = Pos{l, c}\n\t\t\t}\n\t\t\tif mat[l][c] == 'F' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tfim = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(mat, inicio, fim)\n\n\tfor _, line := range mat {\n\t\tfmt.Println(string(line)) // Converte o slice de runes de volta para string para imprimir\n\t}\n}\n",
+            "lines": "111"
+        }
+    ]
+}

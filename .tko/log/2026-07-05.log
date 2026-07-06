@@ -1,0 +1,56 @@
+2026-07-05 15:22:46, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-07-05 15:22:46, EXEC, v:1, k:ed@detonate, mode:FULL, size:67, fail:COMP
+2026-07-05 15:24:01, EXEC, v:1, k:ed@detonate, mode:FULL, size:71, fail:COMP
+2026-07-05 15:24:01, EXEC, v:1, k:ed@detonate, mode:FULL, size:71, fail:COMP
+2026-07-05 15:24:04, EXEC, v:1, k:ed@detonate, mode:FULL, size:71, fail:COMP
+2026-07-05 15:24:04, EXEC, v:1, k:ed@detonate, mode:FULL, size:71, fail:COMP
+2026-07-05 15:24:04, EXEC, v:1, k:ed@detonate, mode:FULL, size:71, fail:COMP
+2026-07-05 15:24:05, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:24:06, EXEC, v:1, k:ed@detonate, mode:FULL, size:72, fail:COMP
+2026-07-05 15:26:16, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 15:27:27, EXEC, v:1, k:ed@detonate, mode:FULL, size:84, fail:COMP
+2026-07-05 15:27:28, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:27:28, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:27:36, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:27:36, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:27:36, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:27:37, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:27:37, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:27:37, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:28:12, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:28:12, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:28:15, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:28:15, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 15:28:34, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 16:54:31, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-07-05 16:54:31, EXEC, v:1, k:ed@detonate, mode:FULL, size:84, fail:COMP
+2026-07-05 16:56:23, EXEC, v:1, k:ed@detonate, mode:FULL, size:84, fail:COMP
+2026-07-05 16:56:24, EXEC, v:1, k:ed@detonate, mode:FULL, fail:COMP
+2026-07-05 16:55:27, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 17:02:53, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 17:05:00, EXEC, v:1, k:ed@detonate, mode:FULL, size:84, fail:COMP
+2026-07-05 17:06:49, EXEC, v:1, k:ed@detonate, mode:FULL, rate:100, size:86
+2026-07-05 17:07:18, MOVE, v:1, k:ed@detonate, mode:BACK
+2026-07-05 17:07:43, SELF, v:1, k:ed@detonate, self:1, rate:100, study:60, concept:1, problem:1
+2026-07-05 17:06:35, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 17:06:49, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-07-05 17:30:40, MOVE, v:1, k:ed@escapeSpread, mode:DOWN
+2026-07-05 17:30:41, MOVE, v:1, k:ed@escapeSpread, mode:PICK
+2026-07-05 17:31:00, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:31, fail:COMP
+2026-07-05 17:32:01, EXEC, v:1, k:ed@escapeSpread, mode:FULL, fail:COMP
+2026-07-05 17:32:01, EXEC, v:1, k:ed@escapeSpread, mode:FULL, fail:COMP
+2026-07-05 17:30:40, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-05 17:31:07, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-05 17:39:27, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-05 17:40:49, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:39, fail:COMP
+2026-07-05 17:40:50, EXEC, v:1, k:ed@escapeSpread, mode:FULL, fail:COMP
+2026-07-05 17:41:12, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-05 17:48:26, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:50, fail:COMP
+2026-07-05 17:48:26, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:50, fail:COMP
+2026-07-05 17:49:27, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-05 17:54:27, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-05 17:56:22, EXEC, v:1, k:ed@escapeSpread, mode:FULL, size:60, fail:COMP
+2026-07-05 17:56:23, EXEC, v:1, k:ed@escapeSpread, mode:FULL, fail:COMP
+2026-07-05 17:56:48, EXEC, v:1, k:ed@escapeSpread, mode:FULL, rate:0, size:59
+2026-07-05 17:56:44, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-07-05 17:56:48, MOVE, v:1, k:ed@escapeSpread, mode:EDIT

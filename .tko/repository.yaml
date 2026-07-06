@@ -19,13 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@linear
 - ed@list
 - ed@tree
-- ed@vector
-- ed@bfs
-- ed@linear
 - ed@backtrack
 - ed@dfs
+- ed@bfs
+- ed@vector
 flags:
   inbox: all
   panel: skills
@@ -35,5 +35,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@cercado
-selected_index: 53
+selected: ed@prin_list1
+selected_index: 13

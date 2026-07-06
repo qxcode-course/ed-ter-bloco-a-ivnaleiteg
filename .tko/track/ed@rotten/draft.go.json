@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_14-41-29",
+            "content": "@@ -10,56 +10,66 @@\n ain%0A\n-%0Atype Ponto struct %7B%0A    linha int%0A    coluna int\n+import %22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-04_14-44-25",
+            "content": "@@ -1,70 +1,39 @@\n-package main%0A%0Atype Ponto struct %7B%0A    linha int%0A    coluna int%0A%7D%0A%0A\n+@@ -62,86 +62,4 @@%0A t%250A%257D%250A%0A-%250A\n func\n@@ -57,12 +57,20 @@\n rid \n-%5B%5D%5B%5D\n+%255B%255D%255B%255D\n int)\n@@ -78,10 +78,14 @@\n int \n-%7B%0A\n+%257B%250A\n     \n@@ -103,17 +103,19 @@\n en(grid)\n-%0A\n+%250A\n     if l\n@@ -124,7 +124,14 @@\n has \n-%0A%7D\n+%250A%257D%250A\n %0A\n",
+            "lines": "3"
+        },
+        {
+            "label": "2026-07-04_14-52-23",
+            "content": "@@ -141,387 +141,7 @@\n has \n-== 0 %7B%0A        return 0%0A    %7D%0A    colunas := len(grid%5B0%5D)%0A%0A    var fila %5B%5DPonto%0A    laranjasFrescas := 0%0A%0A    for l := 0; l %3C linhas; l++  %7B%0A        for c := 0; c %3C colunas; c++ %7B%0A            if grid%5Bl%5D%5Bc%5D == 2 %7B%0A                fila = append(fila, Ponto%7Blinha: l, coluna: c%7D)%0A            %7D else if grid%5Bl%5D%5Bc%5D == 1 %7B%0A                laranjasFrescas++%0A            %7D%0A        %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-07-04_15-07-46",
+            "content": "@@ -521,397 +521,7 @@\n    %7D\n-%0A%0A    if laranjasFrescas == 0 %7B%0A        return 0%0A    %7D%0A%0A    minutos := 0%0A    direcoes := %5B%5D%5B%5Dint %7B%0A        %7B-1, 0%7D,%0A        %7B1, 0%7D,%0A        %7B0, -1%7D,%0A        %7B0, 1%7D,%0A    %7D%0A%0A    for len(fila) %3E 0 && laranjasFrescas %3E 0 %7B%0A        minutos++%0A        tamanhoRodada := len(fila)%0A%0A        for i := 0; i %3C tamanhoRodada; i++ %7B%0A            atual := fila%5B0%5D%0A            fila = fila%5B1:%5D%0A        %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-07-04_15-11-49",
+            "content": "@@ -895,190 +895,8 @@\n %5B1:%5D\n-%0A%0A            for _, dir := range direcoes %7B%0A                novaL := atual.linha + dir%5B0%5D%0A                novaC := atual.coluna + dir%5B1%5D%0A%0A                if novaL %3E= 0%0A            %7D\n %0A   \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-07-04_15-33-10",
+            "content": "@@ -1063,421 +1063,37 @@\n %3E= 0\n- && novaL %3C linhas && novaC %3E= 0 && novaC %3C colunas %7B%0A                    if grid%5BnovaL%5D%5BnovaC%5D == 1 %7B%0A                        grid%5BnovaL%5D%5BnovaC%5D = 2%0A                        laranjasFrescas--%0A                        fila = append(fila, Ponto%7Blinha: novaL, coluna: novaC%7D)%0A                    %7D%0A                %7D%0A            %7D%0A        %7D%0A    %7D%0A%0A    if laranjasFrescas %3E 0 %7B%0A        return -1%0A    %7D%0A    return minutos\n+%0A            %7D%0A        %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-04_15-36-44",
+            "content": "@@ -11,22 +11,8 @@\n in%0A%0A\n-import %22fmt%22%0A%0A\n type\n@@ -37,17 +37,16 @@\n   linha \n- \n int%0A    \n@@ -66,25 +66,25 @@\n %0Afunc orange\n-s\n+r\n Rotting(grid\n@@ -274,16 +274,17 @@\n has; l++\n+ \n  %7B%0A     \n@@ -605,32 +605,33 @@\n ecoes := %5B%5D%5B%5Dint\n+ \n %7B%0A        %7B-1, 0\n@@ -1451,24 +1451,24 @@\n rn -1%0A    %7D%0A\n+\n     return m\n@@ -1480,520 +1480,4 @@\n s%0A%7D%0A\n-%0A%0Afunc main() %7B%0A    // Exemplo 1 (Esperado: 4)%0A    grid1 := %5B%5D%5B%5Dint%7B%0A        %7B2, 1, 1%7D,%0A        %7B1, 1, 0%7D,%0A        %7B0, 1, 1%7D,%0A    %7D%0A    fmt.Println(%22Teste 1 - Resultado:%22, orangesRotting(grid1), %22%7C Esperado: 4%22)%0A%0A    %0A    grid2 := %5B%5D%5B%5Dint%7B%0A        %7B2, 1, 1%7D,%0A        %7B0, 1, 1%7D,%0A        %7B1, 0, 1%7D,%0A    %7D%0A    fmt.Println(%22Teste 2 - Resultado:%22, orangesRotting(grid2), %22%7C Esperado: -1%22)%0A%0A    %0A    grid3 := %5B%5D%5B%5Dint%7B%0A        %7B0, 2%7D,%0A    %7D%0A    fmt.Println(%22Teste 3 - Resultado:%22, orangesRotting(grid3), %22%7C Esperado: 0%22)%0A%7D%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-07-04_15-38-36",
+            "content": "@@ -1513,202 +1513,214 @@\n     \n-var m, n int%0A%0A    for %7B%0A        _, err := fmt.Scan(&m, &n)%0A        if err != nil %7B%0A            break%0A        %7D%0A%0A        grid := make(%5B%5D%5B%5Dint, m)\n+// Exemplo 1 (Esperado: 4)%0A    grid1 := %5B%5D%5B%5Dint%7B%0A        %7B2, 1, 1%7D,%0A        %7B1, 1, 0%7D,%0A        %7B0, 1, 1%7D,\n %0A    \n+%7D%0A\n     f\n-or i := 0; i %3C m; i++ %7B%0A    \n+mt.Println(%22Teste 1 - Resultado:%22, orangesRotting(grid1), %22%7C Esperado: 4%22)%0A%0A\n     \n+%0A\n     grid\n %5Bi%5D \n@@ -1719,28 +1719,21 @@\n grid\n-%5Bi%5D = make(\n+2 := %5B%5D\n %5B%5Dint\n-, n)\n+%7B\n %0A   \n@@ -1741,88 +1741,171 @@\n     \n-    for j := 0; j %3C n; j++ %7B%0A                fmt.Scan(&grid%5Bi%5D%5Bj%5D)%0A   \n+%7B2, 1, 1%7D,%0A        %7B0, 1, 1%7D,%0A        %7B1, 0, 1%7D,%0A    %7D%0A    fmt.Println(%22Teste 2 - Resultado:%22, orangesRotting(grid2), %22%7C Esperado: -1%22)%0A%0A\n     \n+%0A\n     \n- %7D\n+grid3 := %5B%5D%5B%5Dint%7B\n %0A   \n@@ -1905,30 +1905,38 @@\n nt%7B%0A        \n-%7D\n+%7B0, 2%7D,\n %0A    \n+%7D%0A\n     fmt.Prin\n@@ -1943,42 +1943,70 @@\n tln(\n-orangesRotting(grid))%0A    %7D%0A%7D%0A    %0A  \n+%22Teste 3 - Resultado:%22, orangesRotting(grid3), %22%7C Esperado: 0%22)%0A%7D\n %0A\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_15-48-12",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Ponto struct {\n    linha  int\n    coluna int\n}\n\nfunc orangesRotting(grid [][]int) int {\n    linhas := len(grid)\n    if linhas == 0 {\n        return 0\n    }\n    colunas := len(grid[0])\n\n    var fila []Ponto\n    laranjasFrescas := 0\n\n    for l := 0; l < linhas; l++ {\n        for c := 0; c < colunas; c++ {\n            if grid[l][c] == 2 {\n                fila = append(fila, Ponto{linha: l, coluna: c})\n            } else if grid[l][c] == 1 {\n                laranjasFrescas++\n            }\n        }\n    }\n\n    if laranjasFrescas == 0 {\n        return 0\n    }\n\n    minutos := 0\n    direcoes := [][]int{\n        {-1, 0},\n        {1, 0},\n        {0, -1},\n        {0, 1},\n    }\n\n    for len(fila) > 0 && laranjasFrescas > 0 {\n        minutos++\n        tamanhoRodada := len(fila)\n\n        for i := 0; i < tamanhoRodada; i++ {\n            atual := fila[0]\n            fila = fila[1:]\n\n            for _, dir := range direcoes {\n                novaL := atual.linha + dir[0]\n                novaC := atual.coluna + dir[1]\n\n                if novaL >= 0 && novaL < linhas && novaC >= 0 && novaC < colunas {\n                    if grid[novaL][novaC] == 1 {\n                        grid[novaL][novaC] = 2\n                        laranjasFrescas--\n                        fila = append(fila, Ponto{linha: novaL, coluna: novaC})\n                    }\n                }\n            }\n        }\n    }\n\n    if laranjasFrescas > 0 {\n        return -1\n    }\n    return minutos\n}\n\n\nfunc main() {\n    var m, n int\n\n    for {\n        _, err := fmt.Scan(&m, &n)\n        if err != nil {\n            break\n        }\n\n        grid := make([][]int, m)\n        for i := 0; i < m; i++ {\n            grid[i] = make([]int, n)\n            for j := 0; j < n; j++ {\n                fmt.Scan(&grid[i][j])\n            }\n        }\n        fmt.Println(orangesRotting(grid))\n    }\n}\n    \n  \n",
+            "lines": "92"
+        }
+    ]
+}
