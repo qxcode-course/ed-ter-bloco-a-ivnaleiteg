@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_22-45-38",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-07_22-46-24",
+            "content": "@@ -15,121 +15,62 @@\n impo\n+r\n t\n- (%0A   \n  %22fmt%22%0A\n-)%0A%0A\n func \n-findStartingStatin(gas, cos %5B%5Dint) int %7B%0A    totalTank := 0%0A    currTank := 0%0A    start := 0\n+main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-07-07_22-58-29",
+            "content": "@@ -129,183 +129,7 @@\n := 0\n-%0A%0A    for i := 0; i %3C len(gas); i++ %7B%0A        diff := gas%5Bi%5D - cos%5Bi%5D%0A        totalTank += diff%0A        currTank += diff%0A%0A        if currTank %3C 0 %7B%0A            %0A        %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-07-07_23-00-51",
+            "content": "@@ -11,17 +11,16 @@\n in%0A%0Aimpo\n-r\n t (%0A    \n@@ -273,16 +273,28 @@\n k %3C 0 %7B%0A\n+            \n %0A       \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-07-07_23-01-00",
+            "content": "@@ -278,122 +278,23 @@\n 0 %7B%0A\n-            start = i + 1%0A            currTank = 0%0A        %7D%0A    %7D%0A%0A    if totalTank %3C 0 %7B%0A        return -1%0A    %7D%0A%7D%0A\n+%0A        %7D%0A    %7D%0A%7D\n %0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-07-07_23-02-31",
+            "content": "@@ -1,700 +1,63 @@\n-package main%0A%0Aimport (%0A    %22fmt%22%0A)%0A%0Afunc findStartingStatin(gas, cos %5B%5Dint) int %7B%0A    totalTank := 0%0A    currTank := 0%0A    start := 0%0A%0A    for i := 0; i %3C len(gas); i++ %7B%0A        diff := gas%5Bi%5D - cos%5Bi%5D%0A        totalTank += diff%0A        currTank += diff%0A%0A        if currTank %3C 0 %7B%0A            start = i + 1%0A            currTank = 0%0A        %7D%0A    %7D%0A%0A    if totalTank %3C 0 %7B%0A        return -1%0A    %7D%0A    return start%0A%7D%0A%0Afunc main() %7B%0A    var n, int%0A    if _, err := fmt.Scan(&n); err != nil %7B%0A        return%0A    %7D%0A%0A    gas := make(%5B%5Dint, n)%0A    cost := make(%5B%5Dint, n)%0A%0A    for i := 0; i %3C n. i++ %7B%0A        fmt.Scan(&gas%5Bi%5D, &cos%5Bi%5D)%0A    %7D%0A%0A    result := findStartingStation(gas, cost)%0A    fmt.Println%0A%7D%0A\n+@@ -393,24 +393,7 @@%0A   %257D%250A%0A-    return start%250A%0A %257D%250A%250A\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-07-07_23-05-54",
+            "content": "@@ -693,16 +693,8 @@\n ntln\n-(result)\n %0A%7D%0A%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-07-07_23-07-13",
+            "content": "@@ -432,16 +432,17 @@\n    var n\n+,\n  int%0A   \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-07-07_23-07-24",
+            "content": "@@ -578,17 +578,17 @@\n 0; i %3C n\n-;\n+.\n  i++ %7B%0A \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-07-07_23-07-51",
+            "content": "@@ -16,17 +16,20 @@\n mport (%0A\n-%09\n+    \n %22fmt%22%0A)%0A\n@@ -43,33 +43,32 @@\n indStartingStati\n-o\n n(gas, cost %5B%5Din\n@@ -61,17 +61,16 @@\n gas, cos\n-t\n  %5B%5Dint) \n@@ -75,17 +75,20 @@\n ) int %7B%0A\n-%09\n+    \n totalTan\n@@ -94,17 +94,20 @@\n nk := 0%0A\n-%09\n+    \n currTank\n@@ -112,17 +112,20 @@\n nk := 0%0A\n-%09\n+    \n start :=\n@@ -128,17 +128,20 @@\n t := 0%0A%0A\n-%09\n+    \n for i :=\n@@ -164,18 +164,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n diff := \n@@ -196,15 +196,20 @@\n  cos\n-t\n %5Bi%5D%0A\n-%09%09\n+        \n tota\n@@ -222,18 +222,24 @@\n += diff%0A\n-%09%09\n+        \n currTank\n@@ -248,18 +248,24 @@\n = diff%0A%0A\n-%09%09\n+        \n if currT\n@@ -274,19 +274,28 @@\n k %3C 0 %7B%0A\n-%09%09%09\n+            \n start = \n@@ -304,11 +304,20 @@\n + 1%0A\n-%09%09%09\n+            \n curr\n@@ -329,17 +329,29 @@\n = 0%0A\n-%09%09%7D%0A%09%7D%0A%0A%09\n+        %7D%0A    %7D%0A%0A    \n if t\n@@ -365,18 +365,24 @@\n k %3C 0 %7B%0A\n-%09%09\n+        \n return -\n@@ -387,12 +387,18 @@\n  -1%0A\n-%09%7D%0A%09\n+    %7D%0A    \n retu\n@@ -423,17 +423,20 @@\n ain() %7B%0A\n-%09\n+    \n var n in\n@@ -437,17 +437,20 @@\n r n int%0A\n-%09\n+    \n if _, er\n@@ -485,22 +485,34 @@\n l %7B%0A\n-%09%09return%0A%09%7D%0A%0A%09\n+        return%0A    %7D%0A%0A    \n gas \n@@ -529,17 +529,20 @@\n int, n)%0A\n-%09\n+    \n cost := \n@@ -557,17 +557,20 @@\n nt, n)%0A%0A\n-%09\n+    \n for i :=\n@@ -590,10 +590,16 @@\n + %7B%0A\n-%09%09\n+        \n fmt.\n@@ -620,19 +620,24 @@\n &cos\n-t\n %5Bi%5D)%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n resu\n@@ -677,9 +677,12 @@\n st)%0A\n-%09\n+    \n fmt.\n@@ -699,8 +699,9 @@\n sult)%0A%7D%0A\n+%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-07-07_23-10-30",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc findStartingStation(gas, cost []int) int {\n\ttotalTank := 0\n\tcurrTank := 0\n\tstart := 0\n\n\tfor i := 0; i < len(gas); i++ {\n\t\tdiff := gas[i] - cost[i]\n\t\ttotalTank += diff\n\t\tcurrTank += diff\n\n\t\tif currTank < 0 {\n\t\t\tstart = i + 1\n\t\t\tcurrTank = 0\n\t\t}\n\t}\n\n\tif totalTank < 0 {\n\t\treturn -1\n\t}\n\treturn start\n}\n\nfunc main() {\n\tvar n int\n\tif _, err := fmt.Scan(&n); err != nil {\n\t\treturn\n\t}\n\n\tgas := make([]int, n)\n\tcost := make([]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&gas[i], &cost[i])\n\t}\n\n\tresult := findStartingStation(gas, cost)\n\tfmt.Println(result)\n}\n",
+            "lines": "44"
+        }
+    ]
+}

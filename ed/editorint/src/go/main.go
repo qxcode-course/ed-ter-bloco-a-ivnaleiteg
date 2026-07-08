@@ -91,7 +91,10 @@ func (e *Editor) KeyBackspace() {
 		pos := prevLine.End()
 		for it := line.Front(); it != line.End(); {
 			next := it.Next()
-			prevLine.Insert(prevLine.End(), it.Value)
+			node := prevLine.Insert(prevLine.End(), it.Value)
+			if pos == prevLine.End() {
+				pos = node
+			}
 			it = next
 		}
 		e.lines.Erase(e.line)
@@ -107,11 +110,16 @@ func (e *Editor) KeyDelete() {
 	} else if e.line.Next() != e.lines.End() {
 		nextNode := e.line.Next()
 		nextLine := nextNode.Value
+		pos := line.End()
 		for it := nextLine.Front(); it != nextLine.End(); {
 			next := it.Next()
-			line.Insert(line.End(), it.Value)
+			node := line.Insert(line.End(), it.Value)
+			if pos == line.End() {
+				pos = node
+			}
 			it = next
 		}
+		e.cursor = pos
 		e.lines.Erase(nextNode)
 	}
 }

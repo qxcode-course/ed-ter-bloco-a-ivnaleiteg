@@ -6,11 +6,34 @@ import (
 	"os"
 )
 
-// Função que será chamada no LeetCode
 func countBattleships(board [][]byte) int {
-	//
-	_ := board
-	return 
+	if len(board) == 0 || len(board[0]) == 0 {
+		return 0
+	}
+
+	count := 0
+	m := len(board)
+	n := len(board[0])
+
+	for i := 0; i < m; i++ {
+		for j := 0; j < n; j++ {
+			if board[i][j] != 'X' {
+				continue
+			}
+
+			if i > 0 && board[i-1][j] == 'X' {
+				continue
+			}
+
+			if j > 0 && board[i][j-1] == 'X' {
+				continue
+			}
+
+			count++
+		}
+	}
+
+	return count
 }
 
 // Não modifique a função main

@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_23-31-14",
+            "content": "@@ -10,21 +10,20 @@\n ain%0A\n-%0A\n import \n-(%0A%0A) \n+%22fmt%22\n %0Afun\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-07_23-34-54",
+            "content": "@@ -1,76 +1,111 @@\n-package main%0A%0Aimport (%0A\n+@@ -20,251 +20,11 @@%0A t (%250A%0A-\n     \n-%22\n+%2522\n bufio\n-%22%0A    %22fmt%22%0A    %22os%22%0A\n+%2522%250A    %2522fmt%2522%250A    %2522os%2522%250A\n     \n-%22\n+%2522\n strings\n-%22%0A) %0A%0A\n+%2522%250A) %250A%250A\n func\n@@ -131,18 +131,22 @@\n ng) int \n-%7B%0A\n+%257B%250A\n     swit\n@@ -151,18 +151,22 @@\n itch op \n-%7B%0A\n+%257B%250A\n     case\n@@ -170,19 +170,29 @@\n ase \n-%22+%22, %22-%22: %0A\n+%2522+%2522, %2522-%2522: %250A\n     \n@@ -203,25 +203,27 @@\n return 1\n-%0A\n+%250A\n     case\n  %22*%22, %22/\n@@ -218,19 +218,30 @@\n case\n- %22*%22, %22/%22:%0A\n+: %2522*%2522, %2522/%2522:%250A\n     \n@@ -252,17 +252,19 @@\n return 2\n-%0A\n+%250A\n     case\n@@ -268,13 +268,21 @@\n ase \n-%22%5E%22:%0A\n+%2522%255E%2522:%250A\n     \n@@ -297,16 +297,24 @@\n rn 3\n-%0A\n+%250A\n     \n-%7D%0A%0A\n+%257D%250A%250A\n     \n@@ -325,12 +325,20 @@\n rn 0\n-%0A%7D%0A%0A\n+%250A%257D%250A%250A\n func\n@@ -352,56 +352,26 @@\n ator\n-%0A%0A%0Afunc main(\n+%250A%250A%0A+%250A\n ) \n-%7B\n %0A \n-   fmt.Println(%22Hello, World!%22)%0A%7D\n+%250Afun\n %0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-07_23-38-28",
+            "content": "@@ -260,69 +260,8 @@\n ator\n-(token string) bool %7B%0A    return precedence(token) %3E 0%0A%7D%0A%0Afun\n %0A%0A%0Af\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-07-07_23-41-00",
+            "content": "@@ -314,16 +314,19 @@\n  %3E 0%0A%7D%0A%0A\n+fun\n %0A%0A%0Afunc \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-07_23-41-06",
+            "content": "@@ -318,680 +318,8 @@\n %0A%7D%0A%0A\n-func toRPN(tokens %5B%5Dstring) string %7B%0A    var output %5B%5Dstring%0A    var stack %5B%5Dstring%0A%0A    for _, token := range tokens %7B%0A        if isOperator(token) %7B%0A            for len(stack) %3E 0 %7B%0A                top := stack%5Blen(stack)-1%5D%0A                if (token != %22%5E%22 && precedence(top) %3E= precedence(token))%0A                    output = append(outoutput, top)%0A                    stack = stack%5B:len(stack)-1%5D%0A            %7D else %7B%0A                break%0A            %7D%0A        %7D%0A%0A        stack = append(stack, token)%0A    %7D else %7B%0A        output = append(output, token)%0A    %7D%0A%7D%0A%0Afor len(stack) %3E 0 %7B%0A    output = append(output, stack%5Blen(stack)-1%5D)%0A    stack = stack%5B:len(stack)-1%5D%0A%7D\n %0A%0A%0Af\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-07_23-52-24",
+            "content": "@@ -20,17 +20,20 @@\n t (%0A\n-%09\n+    \n %22bufio%22%0A\n %09%22fm\n@@ -32,22 +32,31 @@\n io%22%0A\n-%09\n+    \n %22fmt%22%0A\n-%09\n+    \n %22os%22%0A\n-%09\n+    \n %22str\n@@ -62,16 +62,17 @@\n rings%22%0A)\n+ \n %0A%0Afunc p\n@@ -98,17 +98,20 @@\n ) int %7B%0A\n-%09\n+    \n switch o\n@@ -114,17 +114,20 @@\n ch op %7B%0A\n-%09\n+    \n case %22+%22\n@@ -132,19 +132,26 @@\n +%22, %22-%22:\n-%0A%09%09\n+ %0A        \n return 1\n@@ -151,17 +151,20 @@\n eturn 1%0A\n-%09\n+    \n case %22*%22\n@@ -170,18 +170,24 @@\n %22, %22/%22:%0A\n-%09%09\n+        \n return 2\n@@ -187,17 +187,20 @@\n eturn 2%0A\n-%09\n+    \n case %22%5E%22\n@@ -201,18 +201,24 @@\n se %22%5E%22:%0A\n-%09%09\n+        \n return 3\n@@ -218,20 +218,27 @@\n eturn 3%0A\n-%09%7D%0A%09\n+    %7D%0A%0A    \n return 0\n@@ -278,17 +278,20 @@\n  bool %7B%0A\n-%09\n+    \n return p\n@@ -351,17 +351,20 @@\n tring %7B%0A\n-%09\n+    \n var outp\n@@ -375,17 +375,20 @@\n %5Dstring%0A\n-%09\n+    \n var stac\n@@ -399,17 +399,20 @@\n string%0A%0A\n-%09\n+    \n for _, t\n@@ -434,18 +434,24 @@\n okens %7B%0A\n-%09%09\n+        \n if isOpe\n@@ -465,19 +465,28 @@\n oken) %7B%0A\n-%09%09%09\n+            \n for len(\n@@ -498,20 +498,32 @@\n ) %3E 0 %7B%0A\n-%09%09%09%09\n+                \n top := s\n@@ -541,20 +541,32 @@\n ack)-1%5D%0A\n-%09%09%09%09\n+                \n if (toke\n@@ -618,73 +618,29 @@\n en))\n- %7C%7C (token == %22%5E%22 && precedence(top) %3E precedence(token)) %7B%0A%09%09%09%09%09\n+%0A                    \n outp\n@@ -643,32 +643,35 @@\n output = append(\n+out\n output, top)%0A%09%09%09\n@@ -667,21 +667,36 @@\n t, top)%0A\n-%09%09%09%09%09\n+                    \n stack = \n@@ -720,46 +720,84 @@\n -1%5D%0A\n-%09%09%09%09%7D else %7B%0A%09%09%09%09%09break%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09\n+            %7D else %7B%0A                break%0A            %7D%0A        %7D%0A%0A        \n stac\n@@ -821,18 +821,20 @@\n  token)%0A\n-%09%09\n+    \n %7D else %7B\n@@ -838,11 +838,16 @@\n e %7B%0A\n-%09%09%09\n+        \n outp\n@@ -877,17 +877,17 @@\n en)%0A\n-%09%09\n+    \n %7D%0A\n-%09\n %7D%0A%0A\n-%09\n for \n@@ -903,18 +903,20 @@\n ) %3E 0 %7B%0A\n-%09%09\n+    \n output =\n@@ -952,18 +952,20 @@\n ck)-1%5D)%0A\n-%09%09\n+    \n stack = \n@@ -989,49 +989,12 @@\n -1%5D%0A\n-%09%7D%0A%0A%09return strings.Join(output, %22 %22)%0A\n %7D%0A%0A\n+%0A\n func\n@@ -1007,156 +1007,39 @@\n ) %7B%0A\n-%09scanner := bufio.NewScanner(os.Stdin)%0A%09if scanner.Scan() %7B%0A%09%09line := scanner.Text()%0A%09%09tokens := strings.Fields(line)%0A%09%09fmt.Println(toRPN(tokens))%0A%09%7D\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-08_00-23-23",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\nfunc precedence(op string) int {\n\tswitch op {\n\tcase \"+\", \"-\":\n\t\treturn 1\n\tcase \"*\", \"/\":\n\t\treturn 2\n\tcase \"^\":\n\t\treturn 3\n\t}\n\treturn 0\n}\n\nfunc isOperator(token string) bool {\n\treturn precedence(token) > 0\n}\n\nfunc toRPN(tokens []string) string {\n\tvar output []string\n\tvar stack []string\n\n\tfor _, token := range tokens {\n\t\tif isOperator(token) {\n\t\t\tfor len(stack) > 0 {\n\t\t\t\ttop := stack[len(stack)-1]\n\t\t\t\tif (token != \"^\" && precedence(top) >= precedence(token)) || (token == \"^\" && precedence(top) > precedence(token)) {\n\t\t\t\t\toutput = append(output, top)\n\t\t\t\t\tstack = stack[:len(stack)-1]\n\t\t\t\t} else {\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t}\n\t\t\tstack = append(stack, token)\n\t\t} else {\n\t\t\toutput = append(output, token)\n\t\t}\n\t}\n\n\tfor len(stack) > 0 {\n\t\toutput = append(output, stack[len(stack)-1])\n\t\tstack = stack[:len(stack)-1]\n\t}\n\n\treturn strings.Join(output, \" \")\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif scanner.Scan() {\n\t\tline := scanner.Text()\n\t\ttokens := strings.Fields(line)\n\t\tfmt.Println(toRPN(tokens))\n\t}\n}\n",
+            "lines": "62"
+        }
+    ]
+}

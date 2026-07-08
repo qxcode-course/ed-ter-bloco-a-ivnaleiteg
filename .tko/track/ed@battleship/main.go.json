@@ -2,8 +2,23 @@
     "patches": [
         {
             "label": "2026-07-06_22-54-40",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// Fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode\nfunc countBattleships(board [][]byte) int {\n\t//\n\t_ := board\n\treturn 0\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\n\tboard := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\n\tresult := countBattleships(board)\n\tfmt.Println(result)\n}\n",
+            "content": "@@ -148,16 +148,17 @@\n %09return \n+0\n %0A%7D%0A%0A// N\n",
             "lines": "32"
+        },
+        {
+            "label": "2026-07-07_14-18-39",
+            "content": "@@ -41,16 +41,125 @@\n %22os%22%0A)%0A%0A\n+// Fun%C3%A7%C3%A3o que ser%C3%A1 chamada no LeetCode%0Afunc countBattleships(board %5B%5D%5B%5Dbyte) int %7B%0A%09//%0A%09_ := board%0A%09return %0A%7D\n %0A%0A// N%C3%A3o\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-07_14-24-13",
+            "content": "@@ -1,52 +1,37 @@\n-package main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0A\n+@@ -45,405 +45,8 @@%0A %250A)%250A%250A%0A-\n func\n@@ -54,20 +54,28 @@\n s(board \n-%5B%5D%5B%5D\n+%255B%255D%255B%255D\n byte) in\n@@ -76,19 +76,25 @@\n te) int \n-%7B%0A%09\n+%257B%250A%2509\n if len(b\n@@ -108,10 +108,14 @@\n = 0 \n-%7C%7C\n+%257C%257C\n  len\n@@ -124,36 +124,60 @@\n oard\n-%5B0%5D) == 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A%09\n+%255B0%255D) == 0 %257B%250A%2509%2509return 0%250A%2509%257D%250A%250A%2509\n coun\n@@ -182,18 +182,22 @@\n unt := 0\n-%0A%09\n+%250A%2509\n m := len\n@@ -203,18 +203,22 @@\n n(board)\n-%0A%09\n+%250A%2509\n n := len\n@@ -227,15 +227,25 @@\n oard\n-%5B0%5D)%0A%0A%09\n+%255B0%255D)%250A%250A%2509\n for \n@@ -258,17 +258,19 @@\n ; i \n-%3C\n+%253C\n  m; i++ \n %7B%0A%09%09\n@@ -265,20 +265,28 @@\n  m; i++ \n-%7B%0A%09%09\n+%257B%250A%2509%2509\n for j :=\n@@ -295,17 +295,19 @@\n ; j \n-%3C\n+%253C\n  n; j++ \n %7B%0A%09%09\n@@ -306,65 +306,117 @@\n j++ \n-%7B%0A%09%09%09if board%5Bi%5D%5Bj%5D != 'X' %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%0A%09%09%09\n+%257B%250A%2509%2509%2509if board%255Bi%255D%255Bj%255D != 'X' %257B%250A%2509%2509%2509%2509continue%250A%2509%2509%2509%257D%250A%250A%2509%2509%2509\n if i \n-%3E\n+%253E\n  0 &\n@@ -426,54 +426,96 @@\n oard\n-%5Bi-1%5D%5Bj%5D == 'X' %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%0A%09%09%09\n+%255Bi-1%255D%255Bj%255D == 'X' %257B%250A%2509%2509%2509%2509continue%250A%2509%2509%2509%257D%250A%250A%2509%2509%2509\n if j \n-%3E\n+%253E\n  0 &\n@@ -525,426 +525,155 @@\n oard\n-%5Bi%5D%5Bj-1%5D == 'X' %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%0A%09%09%09count++%0A%09%09%7D%0A%09%7D%0A%0A%09return count%0A%7D%0A%0A// N%C3%A3o modifique a fun%C3%A7%C3%A3o main%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09line := scanner.Text()%0A%09var nl, nc int%0A%09fmt.Sscanf(line, %22%25d %25d%22, &nl, &nc)%0A%0A%09board := make(%5B%5D%5B%5Dbyte, nl)%0A%09for i := 0; i %3C nl; i++ %7B%0A%09%09scanner.Scan()%0A%09%09board%5Bi%5D = %5B%5Dbyte(scanner.Text())%0A%09%7D%0A%0A%09result := countBattleships(board)%0A%09fmt.Println(result)%0A%7D\n+%255Bi%255D%255Bj-1%255D == 'X' %257B%250A%2509%2509%2509%2509continue%250A%2509%2509%2509%257D%250A%250A%2509%2509%2509%250A%2509%2509%2509%250A%2509%2509%257D%250A%2509%257D%250A%250A%2509return count%250A%257D%0A %250A%250A//\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-07-07_14-43-49",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc countBattleships(board [][]byte) int {\n\tif len(board) == 0 || len(board[0]) == 0 {\n\t\treturn 0\n\t}\n\n\tcount := 0\n\tm := len(board)\n\tn := len(board[0])\n\n\tfor i := 0; i < m; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif board[i][j] != 'X' {\n\t\t\t\tcontinue\n\t\t\t}\n\n\t\t\tif i > 0 && board[i-1][j] == 'X' {\n\t\t\t\tcontinue\n\t\t\t}\n\n\t\t\tif j > 0 && board[i][j-1] == 'X' {\n\t\t\t\tcontinue\n\t\t\t}\n\n\t\t\tcount++\n\t\t}\n\t}\n\n\treturn count\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\n\tboard := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\n\tresult := countBattleships(board)\n\tfmt.Println(result)\n}\n",
+            "lines": "55"
         }
     ]
 }
