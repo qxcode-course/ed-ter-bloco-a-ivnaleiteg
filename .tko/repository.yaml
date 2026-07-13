@@ -19,14 +19,14 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@backtrack
-- ed@linear
-- ed@tree
-- ed@rec
-- ed@dfs
 - ed@vector
-- ed@list
+- ed@dfs
+- ed@rec
+- ed@linear
+- ed@backtrack
 - ed@basic
+- ed@list
+- ed@tree
 flags:
   inbox: all
   panel: skills
